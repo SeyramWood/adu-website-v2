@@ -1,0 +1,126 @@
+.student__life {
+    & .title {
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: $secondary;
+    }
+    & .services {
+        & > p {
+            margin-bottom: 2rem;
+        }
+    }
+    .student-govenment {
+        @include grid-row;
+        & > .student-govenment__card {
+            background-color: $white;
+            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+                0px 2px 2px 0px rgb(0 0 0 / 14%),
+                0px 1px 5px 0px rgb(0 0 0 / 12%);
+            @include grid-column(
+                $width: 33.3333%,
+                $height: 100%,
+                $gutter: $column-gutter-1
+            );
+            @include respond-only(xs) {
+                width: column-width(50%, $column-gutter-1);
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in;
+            padding: 1rem;
+            border: 1px solid $text;
+            text-align: center;
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .clubs-and-societies {
+        @include grid-row;
+        & > .clubs-and-societies__card {
+            background-color: $white;
+            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+                0px 2px 2px 0px rgb(0 0 0 / 14%),
+                0px 1px 5px 0px rgb(0 0 0 / 12%);
+            @include grid-column(
+                $width: 33.333%,
+                $height: 32rem,
+                $gutter: $column-gutter-1
+            );
+            @include respond-down(md) {
+                @include grid-column(
+                    $width: 50%,
+                    $height: 32rem,
+                    $gutter: $column-gutter-1
+                );
+            }
+            @include respond-only(xs) {
+                @include grid-column(
+                    $width: 100%,
+                    $height: 37rem,
+                    $gutter: 0rem
+                );
+                margin-bottom: 2rem;
+            }
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            transition: all 0.3s ease-in;
+            padding: 1rem;
+            border: 1px solid $text;
+            text-align: center;
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__album {
+        width: 100%;
+        // padding: 5rem $container-padding;
+        @include grid-row;
+        &__card {
+            @include grid-column(
+                $width: 100%,
+                $height: 100%,
+                $gutter: $column-gutter-1
+            );
+            @include card-bg;
+            @include respond-only(xs) {
+                width: column-width(50%, $column-gutter-1);
+            }
+
+            & > .details {
+                width: 100%;
+                height: 5rem;
+                padding: 0 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                & > .details__content {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    & > span:first-child {
+                        width: 20%;
+                        color: $primary;
+                        text-align: right;
+                        font-weight: bold;
+                    }
+                    & > span:last-child {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

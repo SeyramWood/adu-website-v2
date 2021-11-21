@@ -1,0 +1,161 @@
+.title--primary {
+    font-size: $title-xbig;
+    font-weight: 300;
+    padding: 3rem $container-padding;
+    color: $secondary;
+}
+
+.s__row {
+    width: $max-width;
+    &:not(:last-child) {
+        margin-bottom: $row-gutter;
+    }
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    @include respond-only(xs) {
+        flex-direction: column;
+    }
+
+    & > .s__col {
+        &:not(:last-child) {
+            margin-right: $column-gutter;
+            @include respond-only(xs) {
+                margin-bottom: 2rem;
+            }
+        }
+        &.c--12 {
+            @include grid-12;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--11 {
+            @include grid-11;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--10 {
+            @include grid-10;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--9 {
+            @include grid-9;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--8 {
+            @include grid-8;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--7 {
+            @include grid-7;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--6 {
+            @include grid-6;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--5 {
+            @include grid-5;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--4 {
+            @include grid-4;
+            @include respond-down(md) {
+                @include grid-6;
+            }
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--3 {
+            @include grid-3;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--2 {
+            @include grid-2;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+        &.c--1 {
+            @include grid-1;
+            @include respond-down(xs) {
+                @include grid-12;
+            }
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    & > .line {
+        flex: 1;
+        height: 1px;
+        background-color: $line;
+    }
+
+    & > .title {
+        padding: 0 1rem;
+        text-transform: uppercase;
+        &.text-white {
+            color: $white;
+        }
+    }
+
+    &.primary {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $primary;
+    }
+}
+
+.slide__title {
+    width: 90%;
+    height: 15%;
+    @include center;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond-down(md) {
+        font-size: 2rem;
+    }
+    @include respond-only(xs) {
+        // height: 15%;
+    }
+}
+.mb-4 {
+    margin-bottom: 4rem;
+}
+.color-primary {
+    color: $primary !important;
+    // list-style-type: ;
+}
+button.read-more-btn {
+    @include readMoreBtn;
+}
+.mp- {
+    animation: fade 0.1s ease-in forwards;
+}
