@@ -8,11 +8,11 @@
           data-aos-duration="1200"
           data-aos-anchor-placement="bottom-bottom"
         >
-          Welcome to African Developement Universalis
+          Welcome to African Development Universalis
         </h1>
         <p class="text">
-          Start your studies of one of our Bachelor's or Masters's degrees now
-          online, on-campus or in hybrid teaching mode!
+          Start your studies of one of our Bachelors degrees or Professional
+          programmes on our campus in hybrid teaching mode!
         </p>
       </section>
     </portal>
@@ -33,7 +33,7 @@
 
     <section class="home__our__programs">
       <h1 class="home__our__programs__title title--primary">
-        Overview of our Programmes
+        Overview of our Programs
       </h1>
       <main class="home__our__programs__container">
         <Link class="home__our__programs__container__card">
@@ -44,7 +44,7 @@
             "
           >
             <article class="article">
-              <h6>Programmes</h6>
+              <h6>Programs</h6>
               <h3
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -57,8 +57,8 @@
                 data-aos-duration="1500"
                 data-aos-anchor-placement="bottom-bottom"
               >
-                A.D.U. offers a three-year degree in Business Law that teaches
-                courses in many different aspects of legal work.
+                A.D.U. offers a three-year degree in Business Administrstion
+                with specialisation in Law, Management, Accounting and MIS.
               </p>
             </article>
           </div>
@@ -71,7 +71,7 @@
             "
           >
             <article class="article">
-              <h6>Programmes</h6>
+              <h6>Programs</h6>
               <h3
                 data-aos="fade-up"
                 data-aos-duration="1000"
@@ -99,13 +99,13 @@
             "
           >
             <article class="article">
-              <h6>Programmes</h6>
+              <h6>Programs</h6>
               <h3
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-anchor-placement="bottom-bottom"
               >
-                English Programme
+                English Program
               </h3>
               <p
                 data-aos="fade-up"
@@ -160,11 +160,7 @@
             :bullets="false"
             :fixed-height="true"
           >
-            <vueper-slide
-              v-for="(video, i) in videos"
-              :key="i"
-              :video="video.video"
-            />
+            <vueper-slide :video="videos[0].video" />
           </vueper-slides>
         </div>
         <div
@@ -181,11 +177,7 @@
                   :bullets="false"
                   :fixed-height="true"
                 >
-                  <vueper-slide
-                    v-for="(video, i) in videos"
-                    :key="i"
-                    :video="video.video"
-                  />
+                  <vueper-slide :video="videos[1].video" />
                 </vueper-slides>
               </div>
             </div>
@@ -197,11 +189,7 @@
                   :bullets="false"
                   :fixed-height="true"
                 >
-                  <vueper-slide
-                    v-for="(video, i) in videos"
-                    :key="i"
-                    :video="video.video"
-                  />
+                  <vueper-slide :video="videos[2].video" />
                 </vueper-slides>
               </div>
             </div>
@@ -215,11 +203,7 @@
                   :bullets="false"
                   :fixed-height="true"
                 >
-                  <vueper-slide
-                    v-for="(video, i) in videos"
-                    :key="i"
-                    :video="video.video"
-                  />
+                  <vueper-slide :video="videos[3].video" />
                 </vueper-slides>
               </div>
             </div>
@@ -231,11 +215,7 @@
                   :bullets="false"
                   :fixed-height="true"
                 >
-                  <vueper-slide
-                    v-for="(video, i) in videos"
-                    :key="i"
-                    :video="video.video"
-                  />
+                  <vueper-slide :video="videos[4].video" />
                 </vueper-slides>
               </div>
             </div>
@@ -255,7 +235,7 @@
           <div class="icon">
             <v-icon>mdi-chart-bar</v-icon>
           </div>
-          <div class="title">Intenship</div>
+          <div class="title">Internship</div>
           <div class="text">100% {{ $t("pages.home.title.4") }}</div>
         </div>
         <div
@@ -291,7 +271,7 @@
           <div class="icon">
             <v-icon>mdi-currency-usd</v-icon>
           </div>
-          <div class="title">Leadership</div>
+          <div class="title">Funding</div>
           <div class="text">$10 million {{ $t("pages.home.title.7") }}</div>
         </div>
       </div>
@@ -356,7 +336,7 @@
                 </div>
                 <div class="image">
                   <img
-                    src="/storage/pages/home/news-1.jpg"
+                    src="/storage/pages/home/news-4-sm.jpg"
                     alt="News Image"
                     srcset=""
                   />
@@ -445,7 +425,63 @@ export default {
             // props: { autoplay: true, loop: true, controls: false, muted: true },
             props: {
               allow:
-                "accelerometer; autoplay; encrypted-media; picture-in-picture",
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            },
+          },
+        },
+        {
+          title: "Chancellor’s Message",
+          content:
+            "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
+          // image: "https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp",
+          video: {
+            url: "https://www.youtube.com/embed/1YxFJV9nFqU",
+            // props: { autoplay: true, loop: true, controls: false, muted: true },
+            props: {
+              allow:
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            },
+          },
+        },
+        {
+          title: "Chancellor’s Message",
+          content:
+            "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
+          // image: "https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp",
+          video: {
+            url: "https://www.youtube.com/embed/SBZo8f9H6aU",
+            // props: { autoplay: true, loop: true, controls: false, muted: true },
+            props: {
+              allow:
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            },
+          },
+        },
+        {
+          title: "Chancellor’s Message",
+          content:
+            "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
+          // image: "https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp",
+          video: {
+            url: "https://www.youtube.com/embed/ak5NS6cKFO0",
+            // props: { autoplay: true, loop: true, controls: false, muted: true },
+            props: {
+              allow:
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+            },
+          },
+        },
+        {
+          title: "Chancellor’s Message",
+          content:
+            "This video is autoplayed, played in loop, has no controls and is not reacting to user interactions.",
+          // image: "https://i.ytimg.com/vi_webp/ehJg_OlcjpE/maxresdefault.webp",
+          video: {
+            url: "https://www.youtube.com/embed/XUN6QmzqR5M",
+            // props: { autoplay: true, loop: true, controls: false, muted: true },
+            props: {
+              allow:
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
             },
           },
         },

@@ -20,7 +20,7 @@
     >
       <div class="navigation__brand">
         <Link>
-          <img src="/storage/logo/logo.png" alt="A.D.U. Logo" srcset="" />
+          <img src="/storage/logo/logo-1.png" alt="A.D.U. Logo" srcset="" />
         </Link>
       </div>
       <ul class="navigation__links">
@@ -318,7 +318,7 @@ export default {
     this.$nextTick(() => {
       setTimeout(() => {
         this.pageLoader = false;
-      }, 3000);
+      }, 1500);
     });
   },
   data() {

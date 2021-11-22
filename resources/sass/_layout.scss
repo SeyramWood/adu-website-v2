@@ -72,8 +72,9 @@
             padding: 0 $container-padding-sm;
         }
         &__brand {
-            width: 4.5rem;
-            height: $nav-height;
+            width: 15rem;
+            // height: $nav-height;
+            padding: 0.3rem 0;
             & > a > img {
                 width: 100%;
                 height: 100%;

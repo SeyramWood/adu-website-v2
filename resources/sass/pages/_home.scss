@@ -75,6 +75,9 @@
                     &--1 {
                         background-image: url("/storage/pages/home/programme-1.jpg");
                         background-position: right;
+                        @include respond-only(xs) {
+                            background-position: top;
+                        }
                         & > article.article {
                             @include respond-up(sm) {
                                 right: 0;
@@ -96,11 +99,14 @@
                     }
                     &--2 {
                         background-image: url("/storage/pages/home/programme-2.jpg");
-                        background-position: right;
+                        background-position: top;
+                        @include respond-only(xs) {
+                            background-position: top;
+                        }
                         & > article.article {
                             @include respond-up(sm) {
                                 right: 0;
-                                top: 0;
+                                bottom: 0;
                             }
                             @include respond-only(xs) {
                                 right: 0;
@@ -117,14 +123,10 @@
                     }
                     &--3 {
                         background-image: url("/storage/pages/home/programme-3.jpg");
-                        background-position: left;
-                        @include respond-down(md) {
-                            background-position: center;
-                        }
-
+                        background-position: left center;
                         & > article.article {
                             left: 0;
-                            bottom: 0;
+                            top: 0;
                         }
                         &:hover {
                             background-image: linear-gradient(
@@ -203,7 +205,7 @@
                     @include respond-only(xs) {
                         margin-right: 0rem;
                         margin-bottom: 2rem;
-                        height: 20rem;
+                        height: 25rem;
                     }
                 }
                 &--many {
@@ -236,7 +238,7 @@
                     &--card {
                         height: 11.5rem;
                         @include respond-only(xs) {
-                            height: 20rem;
+                            height: 25rem;
                         }
                     }
                 }
@@ -294,7 +296,7 @@
                     }
                 }
                 & > .text {
-                    font-size: 1.4rem;
+                    // font-size: 1.4rem;
                 }
             }
             @include respond-down(md) {
@@ -332,7 +334,7 @@
         padding-bottom: 5rem;
         &__title {
             color: $white;
-            font-size: $title-xxbig;
+            font-size: $title-xbig;
         }
 
         &__articles {
@@ -372,11 +374,11 @@
                             & > .link {
                                 margin-top: 2rem;
                                 & > h5 {
-                                    font-size: 2rem;
+                                    font-size: 1.3rem;
                                     color: $white;
-                                    font-weight: 400;
+                                    font-weight: 200;
                                     position: relative;
-                                    line-height: 1.2;
+                                    // line-height: 1.2;
                                     transition: all 0.3s ease-in;
                                 }
                             }
@@ -436,9 +438,9 @@
                                 & > .link {
                                     // margin-top: 2rem;
                                     & > h5 {
-                                        font-size: 1.4rem;
+                                        font-size: 1.3rem;
                                         color: $white;
-                                        // font-weight: 400;
+                                        font-weight: 200;
                                         position: relative;
                                         transition: all 0.3s ease-in;
                                     }
