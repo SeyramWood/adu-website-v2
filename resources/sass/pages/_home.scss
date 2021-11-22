@@ -28,22 +28,31 @@
     }
     &__our__programs {
         width: 100%;
-
         &__title {
         }
         &__container {
             width: 100%;
             height: 40rem;
             display: flex;
+            @include respond-only(xs) {
+                flex-direction: column;
+                height: calc(30rem * 3);
+            }
             &__card {
+                position: relative;
                 display: block;
                 width: 33.333%;
+                height: 40rem;
+                @include respond-only(xs) {
+                    width: 100%;
+                    height: 30rem;
+                }
                 &__image {
+                    position: relative;
                     width: 100%;
                     height: 100%;
                     background-repeat: no-repeat;
                     background-size: cover;
-                    position: relative;
                     transition: all 0.2s ease-in;
                     & > article.article {
                         width: 20rem;
@@ -67,8 +76,14 @@
                         background-image: url("/storage/pages/home/programme-1.jpg");
                         background-position: right;
                         & > article.article {
-                            right: 0;
-                            bottom: 0;
+                            @include respond-up(sm) {
+                                right: 0;
+                                bottom: 0;
+                            }
+                            @include respond-only(xs) {
+                                left: 0;
+                                bottom: 0;
+                            }
                         }
 
                         &:hover {
@@ -83,8 +98,14 @@
                         background-image: url("/storage/pages/home/programme-2.jpg");
                         background-position: right;
                         & > article.article {
-                            right: 0;
-                            top: 0;
+                            @include respond-up(sm) {
+                                right: 0;
+                                top: 0;
+                            }
+                            @include respond-only(xs) {
+                                right: 0;
+                                bottom: 0;
+                            }
                         }
                         &:hover {
                             background-image: linear-gradient(
@@ -97,6 +118,10 @@
                     &--3 {
                         background-image: url("/storage/pages/home/programme-3.jpg");
                         background-position: left;
+                        @include respond-down(md) {
+                            background-position: center;
+                        }
+
                         & > article.article {
                             left: 0;
                             bottom: 0;
@@ -125,6 +150,9 @@
     &__study__adu {
         width: 100%;
         padding: 0 $container-padding;
+        @include respond-down(md) {
+            padding: 0 $container-padding-xs;
+        }
         &__title {
             padding-left: 0;
             padding-right: 0;
@@ -132,6 +160,9 @@
         &__caption {
             width: 70%;
             margin-bottom: 2rem;
+            @include respond-only(xs) {
+                width: 80%;
+            }
             & > .link {
                 display: flex;
                 justify-content: flex-start;
@@ -156,22 +187,57 @@
 
         &__videos {
             width: 100%;
-            height: 25rem;
             display: flex;
             justify-content: flex-start;
-
+            @include respond-only(xs) {
+                flex-direction: column;
+            }
             &__card {
                 width: 50%;
-                height: inherit;
+                @include respond-only(xs) {
+                    width: 100%;
+                }
                 &--single {
+                    height: 25rem;
                     margin-right: 1rem;
+                    @include respond-only(xs) {
+                        margin-right: 0rem;
+                        margin-bottom: 2rem;
+                        height: 20rem;
+                    }
                 }
                 &--many {
                     margin-left: 1rem;
-
-                    // @include grid-row;
+                    @include respond-up(xs) {
+                        height: 25rem;
+                    }
+                    @include respond-down(md) {
+                        & > .s__row > .s__col {
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                            width: 100%;
+                        }
+                    }
+                    @include respond-only(xs) {
+                        margin-left: 0rem;
+                        min-height: 25rem;
+                        & > .s__row > .s__col {
+                            &:nth-child(2) {
+                                display: block;
+                            }
+                        }
+                        & > .s__row {
+                            &:nth-child(2) {
+                                display: none;
+                            }
+                        }
+                    }
                     &--card {
                         height: 11.5rem;
+                        @include respond-only(xs) {
+                            height: 20rem;
+                        }
                     }
                 }
             }
@@ -245,7 +311,6 @@
 
                     & > .icon {
                         & > i {
-                            color: $white;
                             font-size: 8rem;
                         }
                     }
@@ -276,9 +341,18 @@
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
+            @include respond-down(md) {
+                padding: 0 $container-padding-xs;
+            }
+            @include respond-only(xs) {
+                flex-direction: column;
+            }
             &__article {
                 width: 50%;
                 margin-right: 1rem;
+                @include respond-only(xs) {
+                    width: 100%;
+                }
                 &--single {
                     & > article.article {
                         & > a {
@@ -325,6 +399,10 @@
                 &--many {
                     margin-left: 1rem;
                     width: 50%;
+                    @include respond-only(xs) {
+                        width: 100%;
+                        margin-top: 2rem;
+                    }
                     & > article.article {
                         width: 100%;
                         // height: 10rem;

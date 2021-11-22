@@ -47,6 +47,13 @@
       </section>
       <section class="banner__cta">
         <portal-target name="cta"> </portal-target>
+        <div class="page__mobile__nav">
+          <ul>
+            <li><Link>Apply</Link></li>
+            <li><Link>Enquire</Link></li>
+            <li><Link>Donate</Link></li>
+          </ul>
+        </div>
       </section>
     </header>
     <main class="main"><slot /></main>
@@ -295,11 +302,6 @@ export default {
       return this.scrollPosition;
     },
   },
-  watch: {
-    scrollPosition(v) {
-      console.log(v);
-    },
-  },
   created() {
     if (this.route().current("home")) {
       this.bannerImage = this.bannerImages.home;
@@ -309,7 +311,6 @@ export default {
     }
   },
   mounted() {
-    const el = this;
     window.addEventListener("scroll", () => {
       this.scrollPosition = window.scrollY;
     });

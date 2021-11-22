@@ -8,7 +8,7 @@
           data-aos-duration="1200"
           data-aos-anchor-placement="bottom-bottom"
         >
-          Welcome to African Developemnt Universalis
+          Welcome to African Developement Universalis
         </h1>
         <p class="text">
           Start your studies of one of our Bachelor's or Masters's degrees now
