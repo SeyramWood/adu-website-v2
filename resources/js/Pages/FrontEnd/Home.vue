@@ -50,15 +50,16 @@
                 data-aos-duration="1000"
                 data-aos-anchor-placement="bottom-bottom"
               >
-                Business Management
+                Business Administration
               </h3>
               <p
                 data-aos="fade-up"
                 data-aos-duration="1500"
                 data-aos-anchor-placement="bottom-bottom"
               >
-                A.D.U. offers a three-year degree in Business Administrstion
-                with specialisation in Law, Management, Accounting and MIS.
+                A.D.U. offers a three-year bachelor's degree in Business
+                Administration with majors in Law, Management, Accounting and
+                MIS.
               </p>
             </article>
           </div>
@@ -112,9 +113,9 @@
                 data-aos-duration="1500"
                 data-aos-anchor-placement="bottom-bottom"
               >
-                The A.D.U. English program is an English Learning establishment
-                that is focused on building the English language proficiency of
-                professionals, etc.
+                The A.D.U. English program focuses on building the English
+                language proficiency of students, professionals, and
+                entreprenuers etc.
               </p>
             </article>
           </div>
@@ -330,8 +331,10 @@
                   data-aos-duration="1000"
                 >
                   <h5>
-                    A.D.U. was nominated, along with 3 other universities, as
-                    one of the best schools in the 8 regions of Niger.
+                    On Friday, November 8 we received one of the funniest but
+                    also most inspiring visits. It was Oualas, one of the
+                    greatest African comedians, holder of the Best Comedian
+                    Award
                   </h5>
                 </div>
                 <div class="image">
@@ -378,8 +381,9 @@
                   data-aos-duration="2000"
                 >
                   <h5>
-                    A.D.U. was nominated, along with 3 other universities, as
-                    one of the best schools in the 8 regions of Niger.
+                    Global Entrepreneurship Week, the iiLab, A.D.U.'s startup
+                    incubator, and the CIPMEN co-organized a training session
+                    called Osez Entreprendre.
                   </h5>
                 </div>
                 <div class="image">

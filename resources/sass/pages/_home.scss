@@ -425,7 +425,7 @@
                                 justify-content: flex-start;
                                 align-items: center;
                                 & > .image {
-                                    width: 23rem;
+                                    width: 10rem;
                                     height: 10rem;
                                     overflow: hidden;
 
@@ -436,13 +436,14 @@
                                     }
                                 }
                                 & > .link {
-                                    // margin-top: 2rem;
+                                    width: calc(100% - 10rem);
                                     & > h5 {
                                         font-size: 1.3rem;
                                         color: $white;
                                         font-weight: 200;
                                         position: relative;
                                         transition: all 0.3s ease-in;
+                                        padding-right: 1rem;
                                     }
                                 }
                             }
