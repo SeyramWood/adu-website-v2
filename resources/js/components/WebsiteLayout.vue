@@ -10,9 +10,9 @@
     <nav
       :class="[
         'navigation',
-        getScrollPositon > 150
+        getScrollPositon > 5
           ? 'sticky'
-          : getScrollPositon <= 29
+          : getScrollPositon <= 5
           ? 'sticky-off'
           : '',
       ]"

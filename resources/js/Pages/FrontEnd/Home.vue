@@ -37,88 +37,66 @@
       </h1>
       <main class="home__our__programs__container">
         <Link class="home__our__programs__container__card">
-          <div
-            class="
-              home__our__programs__container__card__image
-              home__our__programs__container__card__image--1
-            "
-          >
-            <article class="article">
-              <h6>Programs</h6>
-              <h3
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-anchor-placement="bottom-bottom"
-              >
-                Business Administration
-              </h3>
-              <p
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                data-aos-anchor-placement="bottom-bottom"
-              >
-                A.D.U. offers a three-year bachelor's degree in Business
-                Administration with majors in Law, Management, Accounting and
-                MIS.
-              </p>
-            </article>
-          </div>
+          <article class="article">
+            <h6>Programs</h6>
+            <h3
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              Business Administration
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              A.D.U. offers a three-year bachelor's degree in Business
+              Administration with majors in Law, Management, Accounting and MIS.
+            </p>
+          </article>
         </Link>
         <Link class="home__our__programs__container__card">
-          <div
-            class="
-              home__our__programs__container__card__image
-              home__our__programs__container__card__image--2
-            "
-          >
-            <article class="article">
-              <h6>Programs</h6>
-              <h3
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-anchor-placement="bottom-bottom"
-              >
-                Artificial Intelligence
-              </h3>
-              <p
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                data-aos-anchor-placement="bottom-bottom"
-              >
-                The Bachelor of Science in Artificial Intelligence - BS(AI)
-                program provides learners the knowledge and skills to provide
-                solution to complex problems.
-              </p>
-            </article>
-          </div>
+          <article class="article">
+            <h6>Programs</h6>
+            <h3
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              Artificial Intelligence
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              The Bachelor of Science in Artificial Intelligence - BS(AI)
+              program provides learners the knowledge and skills to provide
+              solution to complex problems.
+            </p>
+          </article>
         </Link>
         <Link class="home__our__programs__container__card">
-          <div
-            class="
-              home__our__programs__container__card__image
-              home__our__programs__container__card__image--3
-            "
-          >
-            <article class="article">
-              <h6>Programs</h6>
-              <h3
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-anchor-placement="bottom-bottom"
-              >
-                English Program
-              </h3>
-              <p
-                data-aos="fade-up"
-                data-aos-duration="1500"
-                data-aos-anchor-placement="bottom-bottom"
-              >
-                The A.D.U. English program focuses on building the English
-                language proficiency of students, professionals, and
-                entreprenuers etc.
-              </p>
-            </article>
-          </div>
+          <article class="article">
+            <h6>Programs</h6>
+            <h3
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              English Program
+            </h3>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-anchor-placement="bottom-bottom"
+            >
+              The A.D.U. English program focuses on building the English
+              language proficiency of students, professionals, and entreprenuers
+              etc.
+            </p>
+          </article>
         </Link>
       </main>
     </section>
@@ -170,7 +148,7 @@
           "
         >
           <div class="s__row">
-            <div class="s__col c--6">
+            <div class="s__col c--12">
               <div class="home__study__adu__videos__card--many--card">
                 <vueper-slides
                   :dragging-distance="50"
@@ -182,7 +160,9 @@
                 </vueper-slides>
               </div>
             </div>
-            <div class="s__col c--6">
+          </div>
+          <div class="s__row">
+            <div class="s__col c--12">
               <div class="home__study__adu__videos__card--many--card">
                 <vueper-slides
                   :dragging-distance="50"
@@ -191,32 +171,6 @@
                   :fixed-height="true"
                 >
                   <vueper-slide :video="videos[2].video" />
-                </vueper-slides>
-              </div>
-            </div>
-          </div>
-          <div class="s__row">
-            <div class="s__col c--6">
-              <div class="home__study__adu__videos__card--many--card">
-                <vueper-slides
-                  :dragging-distance="50"
-                  :arrows="false"
-                  :bullets="false"
-                  :fixed-height="true"
-                >
-                  <vueper-slide :video="videos[3].video" />
-                </vueper-slides>
-              </div>
-            </div>
-            <div class="s__col c--6">
-              <div class="home__study__adu__videos__card--many--card">
-                <vueper-slides
-                  :dragging-distance="50"
-                  :arrows="false"
-                  :bullets="false"
-                  :fixed-height="true"
-                >
-                  <vueper-slide :video="videos[4].video" />
                 </vueper-slides>
               </div>
             </div>
@@ -288,6 +242,68 @@
         Ilimi News
       </h1>
       <div class="home__news__articles">
+        <div
+          class="home__news__articles__article"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
+          <div class="title">
+            <Link>
+              {{
+                `A.D.U. was nominated, along with 3 other universities, as one of the
+            best schools in the 8 regions of Niger`.substring(0, 140)
+              }}
+            </Link>
+          </div>
+          <div class="line"></div>
+          <div class="text">
+            {{
+              `The announcement was made at a grand gala held at the Mahatma Gandhi Conference Center on November 7, 2021.`
+            }}
+          </div>
+        </div>
+        <div
+          class="home__news__articles__article"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1500"
+        >
+          <div class="title">
+            <Link>
+              {{
+                `On Friday, November 8 we received one of the funniest but also most
+            inspiring visits.`.substr(0, 140)
+              }}
+            </Link>
+          </div>
+          <div class="line"></div>
+          <div class="text">
+            {{
+              `It was Oualas, one of the greatest African comedians, holder of the Best Comedian Award at the 1st edition of the Awards du Rire 2018.`
+            }}
+          </div>
+        </div>
+        <div
+          class="home__news__articles__article"
+          data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-duration="1000"
+        >
+          <div class="title">
+            <Link>
+              {{ `Global Entrepreneurship Week`.substr(0, 140) }}
+            </Link>
+          </div>
+          <div class="line"></div>
+          <div class="text">
+            {{
+              `On November 9th, the iiLab, A.D.U.'s startup incubator, and the CIPMEN co-organized a training session called Osez Entreprendre (Dare to be entrepreneurial) for A.D.U.'s #YoungLeaders under the theme Moringa Our Green Gold.`
+            }}
+          </div>
+        </div>
+      </div>
+      <!-- <div class="home__news__articles">
         <div
           class="
             home__news__articles__article home__news__articles__article--single
@@ -397,7 +413,7 @@
             </Link>
           </article>
         </div>
-      </div>
+      </div> -->
     </section>
   </section>
 </template>
