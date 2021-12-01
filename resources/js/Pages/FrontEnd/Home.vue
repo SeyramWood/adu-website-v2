@@ -2,18 +2,20 @@
   <section class="home">
     <portal to="cta">
       <section class="banner__cta__content">
-        <h1
+        <p
           class="title"
           data-aos="fade-up"
           data-aos-duration="1200"
           data-aos-anchor-placement="bottom-bottom"
         >
-          Welcome to African Development Universalis
-        </h1>
-        <p class="text">
-          Start your studies of one of our Bachelors degrees or Professional
-          programmes on our campus in hybrid teaching mode!
+          ILIMI, African Development Universalis
         </p>
+        <h1 class="text">
+          <span>Changing the future</span><br />
+          <span>of the sahel.</span>
+          <!-- Start your studies of one of our Bachelors degrees or Professional
+          programmes on our campus in hybrid teaching mode! -->
+        </h1>
       </section>
     </portal>
 
@@ -251,8 +253,10 @@
           <div class="title">
             <Link>
               {{
-                `A.D.U. was nominated, along with 3 other universities, as one of the
-            best schools in the 8 regions of Niger`.substring(0, 140)
+                `A.D.U. nominated as one of the  best Universities in Niger`.substring(
+                  0,
+                  140
+                )
               }}
             </Link>
           </div>
@@ -272,8 +276,10 @@
           <div class="title">
             <Link>
               {{
-                `On Friday, November 8 we received one of the funniest but also most
-            inspiring visits.`.substr(0, 140)
+                `Oualas, one of Africa's greatest comedians visit A.D.U.`.substr(
+                  0,
+                  140
+                )
               }}
             </Link>
           </div>
@@ -292,7 +298,12 @@
         >
           <div class="title">
             <Link>
-              {{ `Global Entrepreneurship Week`.substr(0, 140) }}
+              {{
+                `iiLab and CIPMEN organise training for entrepreneurs`.substr(
+                  0,
+                  140
+                )
+              }}
             </Link>
           </div>
           <div class="line"></div>

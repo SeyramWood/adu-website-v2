@@ -3,6 +3,7 @@
     font-weight: 300;
     padding: 3rem $container-padding;
     color: $secondary;
+    
     @include respond-down(md) {
         padding: 3rem $container-padding-xs;
     }

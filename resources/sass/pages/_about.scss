@@ -1,6 +1,47 @@
 .about {
     width: 100%;
-    .leadership {
+
+    &__welcome {
+        width: 100%;
+        height: 35rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 $container-padding;
+        &__title {
+            padding: 3rem 0;
+        }
+        &__content {
+            width: 50%;
+            & > p {
+            }
+        }
+        &__image {
+            width: 50%;
+            height: 35rem;
+            & > img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__our__why{
+        padding: 10rem $container-padding;
+        width: 100%;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("/storage/bgs/bg.jpg");
+        & > p, & article{
+            width: 70%;
+        }
+        &__title {
+            padding: 3rem 0;
+            
+        }
+    }
+
+    &__leadership {
         width: 100%;
         padding: 0 $container-padding;
 
@@ -8,11 +49,11 @@
             padding: 0 2rem;
             padding-top: 8rem;
         }
-        & > .title {
-            font-size: 2rem;
-            text-transform: uppercase;
-            color: $primary;
-            margin-bottom: 3rem;
+        &__title {
+            padding: 3rem 0;
+            text-transform: capitalize;
+            
+            
         }
         &__container {
             width: 100%;
@@ -26,7 +67,7 @@
             &__card {
                 @include grid-column(
                     $width: 25%,
-                    $height: 25rem,
+                    $height: 30rem,
                     $gutter: $column-gutter-1
                 );
                 @include respond-only(xs) {
@@ -40,8 +81,8 @@
                 transition: all 0.3s ease-in;
                 padding: 2rem 1rem;
                 & > .avatar {
-                    width: 10rem;
-                    height: 10rem;
+                    width: 12rem;
+                    height: 12rem;
                     border-radius: 99999px;
                     & > img {
                         width: 100%;

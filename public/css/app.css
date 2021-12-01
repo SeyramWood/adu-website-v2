@@ -2663,10 +2663,16 @@ a:active {
 .page .banner {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.444), rgba(0, 0, 0, 0.222), rgba(0, 0, 0, 0.111)), url("/storage/banner/home.jpg");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.666), rgba(0, 0, 0, 0.444), rgba(0, 0, 0, 0.222), rgba(0, 0, 0, 0.111)), url("/storage/banner/home.jpg");
+}
+.page .banner.about {
+  background-image: linear-gradient(to right, rgba(107, 107, 107, 0.9999), rgba(107, 107, 107, 0.7777), rgba(107, 107, 107, 0.222), rgba(107, 107, 107, 0.7777), rgba(107, 107, 107, 0.9999)), url("/storage/banner/about.jpg");
+}
+.page .banner.admissions {
+  background-image: linear-gradient(to right, rgba(107, 107, 107, 0.9999), rgba(107, 107, 107, 0.7777), rgba(107, 107, 107, 0.333), rgba(107, 107, 107, 0.222), rgba(107, 107, 107, 0.111)), url("/storage/banner/admissions.jpg");
 }
 @media only screen and (max-width: 35.999em) {
   .page .banner {
@@ -2675,7 +2681,7 @@ a:active {
   }
 }
 .page .banner__brand {
-  width: 100%;
+  width: 70%;
   height: 15rem;
   padding: 0 10rem;
   display: flex;
@@ -2685,7 +2691,7 @@ a:active {
 }
 .page .banner__brand > .logo {
   display: block;
-  width: 20rem;
+  width: 15rem;
 }
 .page .banner__brand > .logo > img {
   width: 100%;
@@ -2700,25 +2706,43 @@ a:active {
   }
 }
 .page .banner__cta {
-  width: 50%;
+  width: 60%;
   height: calc(100vh - calc(6rem + 15rem));
   padding: 0 10rem;
+  padding-bottom: 5rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 .page .banner__cta__content {
   color: #fff;
 }
 .page .banner__cta__content .title {
-  font-size: 3.5rem;
-  font-weight: bold;
-  line-height: 1.2;
+  position: relative;
+  font-size: 1.4rem;
+  font-weight: 100;
+  padding-bottom: 3rem;
+}
+.page .banner__cta__content .title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 30%;
+  height: 2px;
+  background-color: #99001c;
 }
 .page .banner__cta__content .text {
-  font-size: 1.8rem;
-  font-weight: 100;
+  font-weight: bold;
   margin-top: 1rem;
+  line-height: 1;
+}
+.page .banner__cta__content .text > span:first-child {
+  font-size: 4rem;
+}
+.page .banner__cta__content .text > span:last-child {
+  font-size: 7rem;
 }
 @media only screen and (max-width: 61.999em) {
   .page .banner__cta {
@@ -2741,6 +2765,43 @@ a:active {
   .page .banner__cta__content .text {
     margin-top: 3rem;
   }
+}
+.page .banner.banner--secondary {
+  height: 80vh;
+  background-attachment: fixed;
+  background-position: 50%;
+}
+.page .banner.banner--secondary > .banner__cta {
+  height: calc(80vh - calc(6rem + 15rem));
+  padding-bottom: 1rem;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content .title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content .title::after {
+  display: none;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content > .breadcrumb {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content > .breadcrumb > li {
+  font-weight: 300;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content > .breadcrumb > li > a {
+  color: #fff;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content > .breadcrumb > li:not(:last-child)::after {
+  content: "/";
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+.page .banner.banner--secondary > .banner__cta .banner__cta__content > .breadcrumb > li:last-child {
+  font-weight: bold;
 }
 .page > .main {
   width: 100%;
@@ -3516,37 +3577,71 @@ a:active {
 .about {
   width: 100%;
 }
-.about .leadership {
+.about__welcome {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10rem;
+}
+.about__welcome__title {
+  padding: 3rem 0;
+}
+.about__welcome__content {
+  width: 50%;
+}
+.about__welcome__image {
+  width: 50%;
+  height: 35rem;
+}
+.about__welcome__image > img {
+  width: 100%;
+  height: 100%;
+}
+.about__our__why {
+  padding: 10rem 10rem;
+  width: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/storage/bgs/bg.jpg");
+}
+.about__our__why > p, .about__our__why article {
+  width: 70%;
+}
+.about__our__why__title {
+  padding: 3rem 0;
+}
+.about__leadership {
   width: 100%;
   padding: 0 10rem;
 }
 @media only screen and (max-width: 61.999em) {
-  .about .leadership {
+  .about__leadership {
     padding: 0 2rem;
     padding-top: 8rem;
   }
 }
-.about .leadership > .title {
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: #99001c;
-  margin-bottom: 3rem;
+.about__leadership__title {
+  padding: 3rem 0;
+  text-transform: capitalize;
 }
-.about .leadership__container {
+.about__leadership__container {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.about .leadership__avatar {
+.about__leadership__avatar {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.about .leadership__avatar__card {
-  height: 25rem;
+.about__leadership__avatar__card {
+  height: 30rem;
   margin: 0.5rem;
   width: calc(25% - (0.5rem * 2));
   display: flex;
@@ -3558,40 +3653,40 @@ a:active {
   padding: 2rem 1rem;
 }
 @media only screen and (max-width: 35.999em) {
-  .about .leadership__avatar__card {
+  .about__leadership__avatar__card {
     width: calc(50% - (0.5rem * 2));
   }
 }
-.about .leadership__avatar__card > .avatar {
-  width: 10rem;
-  height: 10rem;
+.about__leadership__avatar__card > .avatar {
+  width: 12rem;
+  height: 12rem;
   border-radius: 99999px;
 }
-.about .leadership__avatar__card > .avatar > img {
+.about__leadership__avatar__card > .avatar > img {
   width: 100%;
   height: 100%;
   border-radius: 99999px;
 }
-.about .leadership__avatar__card > .info {
+.about__leadership__avatar__card > .info {
   text-align: center;
   margin-top: 3rem;
 }
-.about .leadership__avatar__card > .info > .name {
+.about__leadership__avatar__card > .info > .name {
   font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
   color: #262626;
   margin-bottom: 0.5rem;
 }
-.about .leadership__avatar__card > .info > .position {
+.about__leadership__avatar__card > .info > .position {
   font-size: 1rem;
 }
-.about .leadership__avatar__card:hover {
+.about__leadership__avatar__card:hover {
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 0px 83px -17px rgba(56, 56, 56, 0.568);
 }
-.about .leadership__article {
+.about__leadership__article {
   width: 30%;
   padding-right: 1rem;
   font-size: 1.1rem;
@@ -3599,12 +3694,65 @@ a:active {
 
 .admissions__advantage {
   width: 100%;
-  padding: 8rem 10rem 0 10rem;
-  background: #eae6dd;
-  background-image: linear-gradient(to right, #eae6dd, rgba(234, 230, 221, 0.8), rgba(234, 230, 221, 0.5), rgba(234, 230, 221, 0.2));
+  padding: 10rem 10rem;
+  background-image: url("/storage/bgs/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.admissions__advantage__title {
+  padding: 3rem 0;
+}
+.admissions__advantage__cta {
+  width: 65%;
+}
+.admissions__advantage__advantages {
+  width: 33%;
+  height: 30rem;
+  position: relative;
+}
+.admissions__advantage__advantages__badge {
+  position: absolute;
+  border-radius: 99999px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.admissions__advantage__advantages__badge > .percentage {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.admissions__advantage__advantages__badge > .text {
+  font-size: 1rem;
+}
+.admissions__advantage__advantages__badge:nth-child(1) {
+  width: 13rem;
+  height: 13rem;
+  background-color: #99001c;
+  top: 0;
+  left: 0;
+}
+.admissions__advantage__advantages__badge:nth-child(2) {
+  width: 15rem;
+  height: 15rem;
+  background-color: #262626;
+  border: 2px solid #ffffff;
+  top: 8rem;
+  left: 8rem;
+}
+.admissions__advantage__advantages__badge:nth-child(3) {
+  width: 17rem;
+  height: 17rem;
+  background-color: #262626;
+  border: 2px solid #ffffff;
+  top: 19rem;
+  left: 0;
 }
 @media only screen and (max-width: 61.999em) {
   .admissions__advantage {
@@ -3620,6 +3768,71 @@ a:active {
 .admissions__advantage > .text {
   color: #262626;
   margin-bottom: 3rem;
+}
+.admissions__info {
+  width: 100%;
+  padding: 10rem 10rem;
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #758592 7%, #FFFFFF 100%);
+}
+.admissions__info__cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.admissions__info__cards__card {
+  height: 40rem;
+  margin: 0.5rem;
+  width: calc(33.33% - (0.5rem * 2));
+  background-color: transparent;
+  background-image: linear-gradient(180deg, #758592 7%, #FFFFFF 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3rem;
+  color: #ffffff;
+}
+@media only screen and (max-width: 35.999em) {
+  .admissions__info__cards__card {
+    width: calc(50% - (0.5rem * 2));
+  }
+}
+.admissions__info__cards__card > .title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+.admissions__info__cards__card > p {
+  margin-bottom: 3rem;
+}
+.admissions__info__cards__card > .contact {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.admissions__info__cards__card > .link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.admissions__info__cards__card > .link > a {
+  color: #99001c;
+}
+.admissions__info__cards__card > .link > span {
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  transition: all 0.3s ease-out;
+  color: #99001c;
+}
+.admissions__info__cards__card > .link:hover > a {
+  text-decoration: underline;
+}
+.admissions__info__cards__card > .link:hover > span {
+  transform: translateX(0.5rem);
 }
 .admissions > .contact {
   width: 100%;

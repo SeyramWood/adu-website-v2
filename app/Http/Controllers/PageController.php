@@ -10,4 +10,16 @@ class PageController extends Controller
     {
         return inertia('FrontEnd/Home');
     }
+    public function about()
+    {
+        return inertia('FrontEnd/About');
+    }
+    public function admissions()
+    {
+        return inertia('FrontEnd/Admissions');
+    }
+    public function Academics()
+    {
+        return inertia('FrontEnd/Academics');
+    }
 }

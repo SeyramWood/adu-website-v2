@@ -19,7 +19,7 @@
       ref="nav"
     >
       <div class="navigation__brand">
-        <Link>
+        <Link href="/">
           <img src="/storage/logo/logo-1.png" alt="A.D.U. Logo" srcset="" />
         </Link>
       </div>
@@ -39,13 +39,13 @@
         </li>
       </ul>
     </nav>
-    <header class="banner">
+    <header :class="[`banner`, getBannerPageClass]" ref="banner">
       <section class="banner__brand">
-        <Link class="logo">
+        <Link href="/" class="logo">
           <img src="/storage/logo/logo-1.png" alt="" />
         </Link>
       </section>
-      <section class="banner__cta">
+      <section class="banner__cta" ref="banner">
         <portal-target name="cta"> </portal-target>
         <div class="page__mobile__nav">
           <ul>
@@ -169,14 +169,14 @@
     >
       <div :class="['nav__drawer__content', toggleNav && 'active']">
         <div class="nav__drawer__content__brand">
-          <Link>
+          <Link href="/">
             <img src="/storage/logo/logo-1.png" alt="A.D.U. Logo" srcset="" />
           </Link>
         </div>
         <div class="nav__drawer__content__navs">
           <ul class="nav__drawer__content__navs__links">
             <li>
-              <Link>{{ $t("pages.navigation.1") }}</Link>
+              <Link href="/about">{{ $t("pages.navigation.1") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.1") }}
@@ -195,7 +195,7 @@
               </div>
             </li>
             <li>
-              <Link>{{ $t("pages.navigation.2") }}</Link>
+              <Link href="/admissions">{{ $t("pages.navigation.2") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.2") }}
@@ -301,14 +301,24 @@ export default {
     getScrollPositon() {
       return this.scrollPosition;
     },
+    getBannerPageClass() {
+      return this.bannerPageClass;
+    },
   },
   created() {
-    if (this.route().current("home")) {
-      this.bannerImage = this.bannerImages.home;
-      console.log("home");
-    } else {
-      console.log("elsse");
-    }
+    this.$inertia.on("navigate", (event) => {
+      switch (event.detail.page.url) {
+        case "/about":
+          this.bannerPageClass = "banner--secondary about";
+          break;
+        case "/admissions":
+          this.bannerPageClass = "banner--secondary admissions";
+          break;
+        default:
+          this.bannerPageClass = "";
+          break;
+      }
+    });
   },
   mounted() {
     window.addEventListener("scroll", () => {
@@ -327,12 +337,11 @@ export default {
       scrollPosition: 0,
       toggleNav: false,
       pageLoader: false,
-      bannerImage: "/storage/banner/home.jpg",
-      bannerImages: {
-        home: "/storage/banner/home.jpg",
-      },
+      bannerPageClass: "",
     };
   },
+
+  methods: {},
 };
 </script>
 
