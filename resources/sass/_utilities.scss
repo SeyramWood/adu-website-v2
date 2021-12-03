@@ -1,8 +1,8 @@
 .title--primary {
     font-size: $title-xbig;
-    font-weight: 300;
+    font-weight:bold;
     padding: 3rem $container-padding;
-    color: $secondary;
+    color: $primary;
     
     @include respond-down(md) {
         padding: 3rem $container-padding-xs;

@@ -18,8 +18,16 @@ class PageController extends Controller
     {
         return inertia('FrontEnd/Admissions');
     }
-    public function Academics()
+    public function academics()
     {
         return inertia('FrontEnd/Academics');
+    }
+    public function iilab()
+    {
+        return inertia('FrontEnd/IIlab');
+    }
+    public function studentLife()
+    {
+        return inertia('FrontEnd/StudentLife');
     }
 }

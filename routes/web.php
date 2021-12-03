@@ -27,5 +27,5 @@ Route::get('/', 'PageController@index')->name('home');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/admissions', 'PageController@admissions')->name('admissions');
 Route::get('/academics', 'PageController@academics')->name('academics');
-Route::get('/ilab', 'PageController@ilab')->name('ilab');
-Route::get('/studentlife', 'PageController@studentlife')->name('studentlife');
+Route::get('/iilab', 'PageController@iilab')->name('iilab');
+Route::get('/student-life', 'PageController@studentLife')->name('studentLife');

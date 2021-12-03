@@ -112,9 +112,9 @@ About Guimbia
     ],
     'title' => [
       '1' => 'about',
-      '2' => 'Welcome to ilimi',
+      '2' => 'Welcome',
       '3' => 'Our Why',
-      '4' => 'leadership',
+      '4' => 'Board of Trustees',
     ],
     'welcome' => 'The mission of A.D.U. is to prepare the most talented young people in Francophone Africa to design and develop the development of their nations as ethical and effective leaders in the public, private and not-for-profit sectors.',
     'why' => [
@@ -156,14 +156,14 @@ About Guimbia
     'link' => [
       '1' => 'The A.D.U Advantage',
       '2' => 'Scholarship Information',
-      '3' => 'Academic Programs Summary',
+      '3' => 'Academic Programs',
       '4' => 'Contact Admission Team',
     ],
     'title' => [
       '1' => 'admissions',
       '2' => 'The A.D.U. Advantage',
       '3' => 'Scholarship Information',
-      '4' => 'Academic Programs Summary',
+      '4' => 'Academic Programs',
       '5' => 'Contact Admission Team',
     ],
     'advantage' => [
@@ -410,14 +410,14 @@ This office focuses on employer relations at the national and international leve
         'title' => "In collaboration with E-TAKARA",
         'description' => "In collaboration with E-Takara, the iiLab of A.D.U held an info session yesterday on the A.D.U campus. We were privileged to have previous laureates of the competition such as Latifa Salissou Hassane (via audio recording), Rafiou Ala Roi Fhad (in person) and Idriss Laouali Abdou (via video-recording) share with ADU Young Leaders about the incredible experience their participation in the competition has been for them. The E-Takara team also shared more about the vision behind the competition, as well as the selection criteria, before encouraging A.D.U Young Leaders to apply massively.",
         'date' => "December 25, 2021",
-        'image' => "/storage/images/event-2.jpg",
+        'image' => "/storage/pages/iilab/event-2.jpg",
       ],
       [
         'title' => "iiLab Open House for the Kagamé cohort",
         'description' => "As lifelong members of the ilimi community, the iiLab’s support to the Kagamé cohort (which just graduated) will always be available. Nonetheless, for the upcoming months, the iiLab has an exciting and comprehensive entrepreneurship support program in store, just for the Kagamé Cohort, made up of large-group sessions, one-on-one sessions, some funding, and other activities aiming to equip our Kagame Cohort Young Leaders with tools and resources for them to catalyze their growth as entrepreneurs and that of their ideas, regardless of their current advancement level. The Open House allowed the iiLab to give out more details about the program which will be informed by insights from a currently ongoing needs-assessment process.
                     Note: The iiLab also has exciting plans for the Wangari, Johnson and Jean cohorts, once they return to campus.",
         'date' => "September 14, 2021",
-        'image' => "/storage/images/event-1.jpeg",
+        'image' => "/storage/pages/iilab/event-1.jpeg",
       ],
     ],
     'showrooms' => [

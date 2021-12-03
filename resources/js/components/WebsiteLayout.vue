@@ -78,7 +78,7 @@
           ><v-icon>mdi-twitter</v-icon></a
         >
         <a
-          href="instagram.com/africandevelopmentuniversalis"
+          href="https://instagram.com/africandevelopmentuniversalis"
           target="_blank"
           rel="noopener noreferrer"
           ><v-icon>mdi-instagram</v-icon></a
@@ -110,7 +110,7 @@
             </p>
             <p>
               {{ $t("pages.footer.phone") }}:
-              <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+              <a href="tel:+22792396868">(+227) 92-39-68-68</a> <br /><a
                 href="tel:+22793396868"
                 >(+227) 93-39-68-68</a
               >
@@ -122,13 +122,11 @@
           <div class="address">
             <p>
               {{ $t("pages.footer.email") }}:
-              <a href="mailto:admissions@ilimi.edu.ne"
-                >admissions@ilimi.edu.ne</a
-              >
+              <a href="mailto:ai@ilimi.edu.ne">ai@ilimi.edu.ne</a>
             </p>
             <p>
               {{ $t("pages.footer.phone") }}:
-              <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+              <a href="tel:+22792396868">(+227) 92-39-68-68</a><br /><a
                 href="tel:+22793396868"
                 >(+227) 93-39-68-68</a
               >
@@ -140,13 +138,11 @@
           <div class="address">
             <p>
               {{ $t("pages.footer.email") }}:
-              <a href="mailto:admissions@ilimi.edu.ne"
-                >admissions@ilimi.edu.ne</a
-              >
+              <a href="mailto:english@ilimi.edu.ne">english@ilimi.edu.ne</a>
             </p>
             <p>
               {{ $t("pages.footer.phone") }}:
-              <a href="tel:+22792396868">(+227) 92-39-68-68</a>/<a
+              <a href="tel:+22792396868">(+227) 92-39-68-68</a><br /><a
                 href="tel:+22793396868"
                 >(+227) 93-39-68-68</a
               >
@@ -156,7 +152,7 @@
       </section>
       <section class="page__footer__copyright">
         <span
-          >&copy;{{ new Date().getUTCFullYear() }} A.D.U, All Right
+          >&copy;{{ new Date().getUTCFullYear() }} A.D.U. - All Rights
           Reserved</span
         >
         <!-- {{ $t("attribute-name") }} -->
@@ -217,7 +213,7 @@
               </div>
             </li>
             <li>
-              <Link>{{ $t("pages.navigation.3") }}</Link>
+              <Link href="/academics">{{ $t("pages.navigation.3") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.3") }}
@@ -236,7 +232,7 @@
               </div>
             </li>
             <li>
-              <Link>{{ $t("pages.navigation.10") }}</Link>
+              <Link href="/iilab">{{ $t("pages.navigation.10") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.10") }}
@@ -255,7 +251,7 @@
               </div>
             </li>
             <li>
-              <Link>{{ $t("pages.navigation.7") }}</Link>
+              <Link href="/student-life">{{ $t("pages.navigation.7") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.7") }}
@@ -313,6 +309,15 @@ export default {
           break;
         case "/admissions":
           this.bannerPageClass = "banner--secondary admissions";
+          break;
+        case "/academics":
+          this.bannerPageClass = "banner--secondary academics";
+          break;
+        case "/iilab":
+          this.bannerPageClass = "banner--secondary iilab";
+          break;
+        case "/student-life":
+          this.bannerPageClass = "banner--secondary student-life";
           break;
         default:
           this.bannerPageClass = "";

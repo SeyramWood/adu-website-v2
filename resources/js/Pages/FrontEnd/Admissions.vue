@@ -12,7 +12,7 @@
         </h1>
         <ul class="breadcrumb">
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/admission">Admissions</Link></li>
+          <li><Link href="/admissions">Admissions</Link></li>
         </ul>
       </section>
     </portal>
@@ -64,8 +64,19 @@
     <section class="admissions__info">
       <div class="admissions__info__cards">
         <div class="admissions__info__cards__card">
-          <h1 class="title">Scholarship</h1>
-          <p>
+          <h1
+            class="title"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Scholarship
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-anchor-placement="bottom-bottom"
+          >
             Therefore, A.D.U. offers Scholarship for talented student who are
             experiencing economic and social hardship so that they will be able
             to achieve their goals and impact their community. You can apply for
@@ -83,8 +94,19 @@
           </div>
         </div>
         <div class="admissions__info__cards__card">
-          <h1 class="title">Programs Summary</h1>
-          <p>
+          <h1
+            class="title"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Programs Summary
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-anchor-placement="bottom-bottom"
+          >
             Our 3-year bachelor program is both nationally and internationally
             recognized. Our degree programs are all accredited by Ministry of
             Higher Education, Research and Innovation, Niger. We offer two
@@ -101,13 +123,29 @@
           </div>
         </div>
         <div class="admissions__info__cards__card">
-          <h1 class="title">Admission Team</h1>
-          <p>
+          <h1
+            class="title"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Admission Team
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            data-aos-anchor-placement="bottom-bottom"
+          >
             For additional questions and/or inquiry regarding application, you
             can reach us through:
           </p>
           <div class="contact">
-            <ul style="list-style-type: disc; margin-left: 1.2rem">
+            <ul
+              style="list-style-type: disc; margin-left: 1.2rem"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              data-aos-anchor-placement="bottom-bottom"
+            >
               <li>
                 <a href="mailto:admissions@ilimi.edu.ne" class="color-primary"
                   >admissions@ilimi.edu.ne</a

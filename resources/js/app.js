@@ -5,6 +5,7 @@ import { InertiaProgress } from "@inertiajs/progress";
 
 import vuetify from "@/plugins/vuetify";
 import VueMeta from "vue-meta";
+import Lightbox from "@morioh/v-lightbox";
 import PortalVue from 'portal-vue'
 import axios from "axios";
 import AOS from 'aos'
@@ -15,7 +16,7 @@ import translations from "./lang.js";
 import VueSmoothScroll from "vue2-smooth-scroll";
 
 InertiaProgress.init();
-
+Vue.use(Lightbox)
 Vue.use(PortalVue)
 Vue.use(VueMeta, {
     // optional pluginOptions

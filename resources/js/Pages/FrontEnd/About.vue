@@ -21,7 +21,7 @@
       <main class="about__welcome__content">
         <h1 class="about__welcome__title title--primary" data-aos="fade-up"
           data-aos-duration="1000"
-          data-aos-anchor-placement="bottom-bottom">Welcome to Ilimi</h1>
+          data-aos-anchor-placement="bottom-bottom">Welcome by the Chacellor</h1>
         <p data-aos="fade-up"
           data-aos-duration="1500"
           data-aos-anchor-placement="bottom-bottom">
@@ -31,12 +31,15 @@
           not-for-profit sectors.
         </p>
       </main>
-      <div class="about__welcome__image">
-        <img
-          src="/storage/pages/about/pleasantry.jpg"
-          alt="welcome image"
-          srcset=""
-        />
+      <div class="about__welcome__video">
+        <vueper-slides
+          :dragging-distance="50"
+          :arrows="false"
+          :bullets="false"
+          :fixed-height="true"
+        >
+          <vueper-slide :video="video.video" />
+        </vueper-slides>
       </div>
     </section>
 
@@ -119,7 +122,20 @@ export default {
 
   data() {
     return {
-      showMore: "",
+      showMore: false,
+      video: {
+        title: "Chancellor’s Message",
+        video: {
+          // url: "https://www.youtube.com/embed/wG7efaUPGTA",
+          url: "https://www.youtube.com/embed/1YxFJV9nFqU?controls=1&fs=1&modestbranding=1&color=white&iv_load_policy=3&autohide=1&enablejsapi=1",
+          // props: { autoplay: true, loop: true, controls: false, muted: true },
+          props: {
+            allow:
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+          },
+        },
+      },
+
       leadership: [
         {
           name: "Kader Kaneye",
@@ -138,12 +154,6 @@ export default {
           faculty: "",
           position: `CEO, High Authority of Waqf Is DB Senior Officer in Niger`,
           image: "/storage/pages/about/KhadijahDiallo.jpg",
-        },
-        {
-          name: `ROSE A. DODD`,
-          faculty: "",
-          position: `Director, the Education Collaborative Ashesi University`,
-          image: "/storage/pages/about/RoseDodd.jpg",
         },
         {
           name: `FATI N'ZI-HASSANE`,

@@ -28,6 +28,7 @@
         "@inertiajs/inertia": "^0.10.1",
         "@inertiajs/inertia-vue": "^0.7.2",
         "@inertiajs/progress": "^0.2.6",
+        "@morioh/v-lightbox": "^1.0.3",
         "aos": "^2.3.4",
         "minify-css-string": "^1.0.0",
         "portal-vue": "^2.1.7",
