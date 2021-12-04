@@ -2,32 +2,79 @@
 
 return [
   'home' => [
-    'title' => [
-      '1' => 'Direction',
+    'banner' => [
+      'p' => 'ILIMI, African Development Universalis',
+      'h1' => "Changer l'avenir",
+      'h2' => "du Sahel.",
+    ],
+    'values' => [
+      '1' => 'Leadership',
       '2' => 'Innovation',
       '3' => 'Excellence',
-      '4' => 'Les étudiants de premier cycle reçoivent une aide financière',
-      '5' => 'Undergraduates Receive Financial Aid',
-      '6' => 'Des femmes pour réaliser l\'égalité des genres',
-      '7' => 'Requis Pour 1 000 leaders de plus de 10 ans',
-      '8' => 'Nos filières',
-      '9' => 'Droit',
-      '10' => 'Intelligence artificielle',
-      '11' => 'Programme d\'anglais',
-      '12' => 'À L\'HONNEUR',
-      '13' => 'L\'ESPRIT DE DONNER UN FINANCEMENT COLLECTIF',
-      '14' => 'Actualités Ilimi',
-      '15' => 'Les meilleures réactions',
-      '16' => 'Les meilleures réactions',
-      '17' => 'Bourses ADU',
-      '18' => 'Administration des affaires',
     ],
-    'p' => "A.D.U. offre un diplôme de trois ans en droit des affaires qui enseigne des cours sur de nombreux aspects différents du travail juridique. Les étudiants entrant dans ce programme doivent avoir un engagement fort en faveur de la justice et de l'égalité et de la lutte contre la corruption.",
-    'p1' => "Le programme de baccalauréat ès sciences en intelligence artificielle - BS (IA) fournit aux apprenants les connaissances et les compétences nécessaires pour transformer des entrées complexes de texte, de vision, de langage et de grandes bases de données en décisions intelligibles et exploitables pour améliorer les capacités humaines.",
-    'p2' => "Le programme d'anglais ADU est un établissement d'apprentissage de l'anglais de l'Université africaine de développement qui se concentre sur le renforcement des compétences en anglais des professionnels, des hommes d'affaires et des femmes d'affaires, etc.",
+    'studyAtADU' => [
+      'title' => "Étudier à l'A.D.U.",
+      'p' => "African Development Universalis A.D.U est un établissement bilingue et offre à ses étudiants une formation en arts libéraux, les rendant aptes à occuper avec succès les emplois les plus demandés. Ces formations sont dispensées par des professeurs engagés qui vous mettent au défi et vous incite à penser de manière critique et créative afin de trouver des solutions aux problématiques de votre communauté. Que ce soit en groupes de cours intensifs, durant vos stages, ou en faisant de la recherche, à A.D.U vous vous transformerez tout en vivant vos passions!",
+      'advantages' => [
+        'p11' => '100%',
+        'p12' => 'Stages & placements',
+        'p21' => '70%',
+        'p22' => "Bourses d'études\n& aide financière",
+        'p31' => '70%',
+        'p32' => 'Femmes & égalité des sexes',
+
+      ],
+    ],
+    'programs' => [
+      'title' => "Aperçu des programmes",
+      'programs' => [
+        [
+          'title' =>  "Droit",
+          'text' =>  "A.D.U. offre un diplôme de trois ans en droit des affaires qui dispense des cours sur de nombreux aspects différents du travail juridique.",
+          'url' =>  "/storage/pages/home/programs/law.jpg",
+        ],
+        [
+          'title' => "Comptabilité",
+          'text' => "Un diplôme en comptabilité et finance vous formera pour travailler comme analyste financier, ou comme consultant en affaires qui aide à guider les petits entrepreneurs.",
+          'url' => "/storage/pages/home/programs/accounting.jpg",
+        ],
+        [
+          'title' => "Gestion de projet",
+          'text' => "Les gestionnaires de projet sont formés pour s'assurer que les projets complexes se déroulent conformément au calendrier.",
+          'url' => "/storage/pages/home/programs/project.jpg",
+        ],
+        [
+          'title' => "Informatique de Gestion (SI)",
+          'text' => "Le programme d'A.D.U. vous placera au centre de ce domaine passionnant en vous formant à la création de nouvelles technologies",
+          'url' => "/storage/pages/home/programs/mis.jpg",
+        ],
+        [
+          'title' => "Intelligence Artificielle",
+          'text' => "Le programme dote les jeunes de compétences pour développer des systèmes et des logiciels intelligents qui exploitent les données pour résoudre les problèmes sociétaux et organisationnels.",
+          'url' => "/storage/pages/home/programs/ai.jpg",
+        ],
+        [
+          'title' => "English Program",
+          'text' => "Le programme d'anglais de l'A.D.U. vise à renforcer les compétences en anglais des étudiants, des professionnels, des entrepreneurs, etc.",
+          'url' => "/storage/pages/home/programs/english.png",
+        ],
+      ]
+    ],
+    'welcome' => 'Bienvenue dans le futur',
+    'partners' => [
+      'title' => 'Nos partenaires',
+      'ashesi' => [
+        'name' => 'Ashesi University',
+        'p1' => "Avec un classement parmi les 400 meilleures universités du monde dans le classement Times Higher Education University Impact Rankings, en 2020, l'Université Ashesi est reconnue comme étant l'une des meilleures universités d'Afrique.",
+        'p2' => "De ses débuts à ce jour, A.D.U a été encadré et soutenu par Ashesi, tous deux étant des institutions à but non lucratif et ayant des missions similaire quand à l'élévation de la barre dans l'enseignement supérieur en Afrique à travers la formation de leaders éthiques et entrepreneuriaux.",
+        'p3' => "En 2017, Ashesi lance la collaboration éducative, dans laquelle A.D.U fait partie, pour combler le vide existant dans l'enseignement supérieur au sein du petit groupe d'universités d'arts libéraux qui commencent à s'établir en Afrique.",
+        'link' => 'Visitez Ashesi'
+      ],
+    ],
+
     'news' => [
       [
-        'title' => "Alkalami d’Or 2021",
+        'title' => "L'A.D.U. désignée comme l'une des meilleures universités du Niger",
         'text' => "<p>A.D.U. a été désigné, avec 3 autres universités, comme l'une des meilleures écoles des 8 régions du Niger.
 L'annonce a été faite lors d'un grand gala organisé au centre de conférence Mahatma Gandhi le 7 novembre 2021.
 </p><p>Les Alkalami d'Or sont des trophées qui récompensent les écoles publiques et privées ainsi que les universités et instituts des huit régions du Niger pour leur volonté de faire de l'excellence académique et parascolaire leur cheval de bataille. À 'A.D.U. l'excellence académique règne comme en témoigne le taux de réussite de 100% au Brevet de Techniciens Supérieur d'Etat en juin 2021.</p>",
@@ -39,7 +86,7 @@ L'annonce a été faite lors d'un grand gala organisé au centre de conférence 
         ]
       ],
       [
-        'title' => "Oualas at A.D.U.",
+        'title' => "Oualas, l'un des plus grands humoristes africains en visite à l'A.D.U.",
         'text' => "
         <p>Vendredi 8 novembre, nous avons reçu l'une des visites les plus drôles mais aussi les plus inspirantes. Il s'agissait de Oualas, l'un des plus grands humoristes africains, détenteur du prix du meilleur humoriste lors de la 1ère édition des Awards du Rire 2018.</p>
         <p>Oualas, de son vrai nom Tahar Lazrak, est venu nous rendre visite après son spectacle à l'hôtel Noom de Niamey, où A.D.U. était partenaire. La joie et le bonheur de rencontrer la star mondiale se lisaient sur les visages des YoungLeaders qui n'ont pas hésité à prendre un maximum de photos avec Oualas, alias le plus marocain des Ivoiriens !</p>
@@ -53,7 +100,7 @@ L'annonce a été faite lors d'un grand gala organisé au centre de conférence 
         ]
       ],
       [
-        'title' => "Global Entrepreneurship Week",
+        'title' => "IILab et CIPMEN organisent une formation pour les entrepreneurs",
         'text' => "
         <p>Le 9 novembre, pendant la semaine mondiale de l'entrepreneuriat, l'iiLab, l'incubateur de startups de l'A.D.U., et le CIPMEN ont co-organisé une session de formation intitulée <q>Osez Entreprendre</q> pour les #YoungLeaders de l'A.D.U. sous le thème <q>Moringa Our Green Gold</q>.</p>
         <p>Pendant cette formation, différentes notions leur ont été données pour renforcer ce qu'ils apprennent déjà avec iiLab. Juste après la formation, une visite des locaux du CIPMEN a eu lieu avec des entrepreneurs venus de tout Niamey pour exposer des produits dérivés du Moringa. Cette visite a été suivie d'un concours de pitch où la candidate, Khadija Ibrahim, étudiante en 3ème année à l'A.D.U. a remporté la première place !</p>
@@ -65,26 +112,6 @@ L'annonce a été faite lors d'un grand gala organisé au centre de conférence 
           '/storage/pages/home/news/news-c-3.jpg',
           '/storage/pages/home/news/news-c-4.jpg',
         ]
-      ],
-    ],
-    'spotlight' => [
-      [
-        'title' => 'Guimbia means "Queen" in Haussa',
-        'text' => "Guimbia veut dire « Reine » en Haussa, la deuxième langue la plus parlée en Afrique. C’est à l’honneur des femmes que Hawa Hassane Gado, alias Hawa Guimbia, a donné à son entreprise ce nom tant évocateur. Hawa Guimbia a crée la première marque de cosmétique de luxe du Niger, Guimbia Beauty, avec ses 4 amies et partenaires, Adama Souley, Roumanatou Lamine et Ramatou Saley.",
-        'image' => '/storage/pages/home/spotlight/sl-1.jpg',
-      ],
-      [
-        'title' => 'Ramatou Saley Farka',
-        'text' => "Ramatou Saley Farka, surnommée Boss Rama pour sa rigueur lorsqu’il faut travailler, est une des étudiantes les plus prometteuses de A.D.U. 
-Récemment elle a été sélectionnée pour la bourse UGRAD qui fait d’elle la toute première du Niger à accéder à cet opportunité. Rama est pleine de vie et nous somme fier d’elle!
-",
-        'image' => '/storage/pages/home/spotlight/sl-2.jpg',
-      ],
-
-      [
-        'title' => 'Ramatou Saley Farka',
-        'text' => '',
-        'image' => '/storage/pages/home/spotlight/sl-3.jpg',
       ],
     ],
     'vm' => 'Voir plus',
@@ -347,15 +374,13 @@ Remarque : Le iiLab a également des initiatives en vue pour les cohortes Wangar
     'banner' => "La vie étudiante implique généralement des activités sociales au sein de l'A.D.U. campus, et le temps passé avec les camarades de classe et les enseignants au sein de la classe et à l'extérieur. Le but de la vie étudiante est de créer un bon environnement où les étudiants grandiront et auront une très bonne expérience au cours de leur parcours académique à A.D.U."
   ],
   'navigation' => [
-    '1' => 'Sur',
-    '2' => 'Admissions',
-    '3' => 'Nos filières',
-    '4' => 'Appliquer',
-    '5' => 'Galerie',
-    '6' => 'Faire un don',
-    '7' => 'Vie étudiante',
-    '8' => 'Mon Ilimi',
-    '9' => 'Langue',
+    '1' => 'À propos de',
+    '2' => 'Étude',
+    '3' => 'IILab',
+    '4' => 'Vie étudiante',
+    '5' => 'Appliquer',
+    '6' => 'Renseigner',
+    '7' => 'Faire un don',
   ],
   'footer' => [
     'email' => 'Courriel',

@@ -33,12 +33,7 @@
             data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="1500"
           >
-            A.D.U is a bilingual establishment, with instruction in both French
-            and English. We offer fields of study within liberal arts framework
-            for today’s most in-demand jobs, taught by committed professors who
-            challenge you to think critically and creatively. From interactive
-            classes to internship and research, you will transform as you pursue
-            your passions!
+            African Development University (A.D.U) is a university of excellence based in Niamey (Niger). A.D.U draws inspiration from the world’s leading institutions of higher education such as Ashesi University in Ghana and Harvard University in the US. A.D.U is a bilingual establishment, with instruction in both French and English.
           </p>
         </div>
       </div>
@@ -145,7 +140,7 @@
           <img src="/storage/pages/academics/woman.jpg" alt="" srcset="" />
         </div>
         <div class="academics__majors__program__text image--right--text">
-          <h3 class="title">Bachelor in Project Management</h3>
+          <h3 class="title">Bachelor of Project Management</h3>
           <article class="article">
             <p
               data-aos="fade-up"
@@ -199,7 +194,7 @@
           <img src="/storage/pages/academics/mis.jpg" alt="" srcset="" />
         </div>
         <div class="academics__majors__program__text image--right--text">
-          <h3 class="title">Bachelor of Management Information System</h3>
+          <h3 class="title">Bachelor of Management Information Systems</h3>
           <article class="article">
             <p
               data-aos="fade-up"
@@ -382,7 +377,7 @@ export default {
         },
         {
           title: "Contact Admissions Team",
-          text: `For additional questions and/or inquiry regarding the status of your application, you can reach us through:\nadmissions@ilimi.edu.ne,\n+227 92 39 68 68 (WhatsApp),\n+227 93 39 68 68 (Mobile)`,
+          text: `For additional questions and/or inquiry regarding the status of your application, you can reach us through:\nadmissions@ilimi.edu.ne,\n+227 923 968 68 (WhatsApp)\n+227 9339 68 68 (Mobile)`,
           url: "/storage/pages/academics/contact.jpg",
         },
       ],

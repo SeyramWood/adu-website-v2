@@ -1,43 +1,99 @@
 <?php
 
 return [
+
   'home' => [
-    'title' => [
+    'banner' => [
+      'p' => 'ILIMI, African Development Universalis',
+      'h1' => 'Changing the future',
+      'h2' => 'of the Sahel.',
+    ],
+    'values' => [
       '1' => 'Leadership',
       '2' => 'Innovation',
       '3' => 'Excellence',
-      '4' => 'Internships / Starting Own Companies',
-      '5' => 'Undergraduates Receive Financial Aid',
-      '6' => 'Women to Fulfil Gender Equality',
-      '7' => 'Required For 1,000 leaders Over 10yrs',
-      '8' => 'Academics',
-      '9' => 'Law',
-      '10' => 'Artificial Intelligence',
-      '11' => 'English Programme',
-      '12' => 'IN THE SPOTLIGHT',
-      '13' => 'SPIRIT OF GIVING CROWD FUNDING',
-      '14' => 'Ilimi News',
-      '15' => 'The Best Reactions',
-      '16' => 'The Best Reactions',
-      '17' => 'ADU Scholarships',
-      '18' => 'Business Administraion',
     ],
-    'p' => "A.D.U. offers a three-year degree in Business Law that teaches
-              courses in many different aspects of legal work. Students entering
-              this program should have a strong commitment to justice and
-              equality and fighting corruption.",
-    'p1' => "The Bachelor of Science in Artificial Intelligence - BS(AI)
-              program provides learners the knowledge and skills to transform
-              complex inputs of text, vision, language and large databases into
-              intelligible and actionable decisions to enhance human
-              capabilities.",
-    'p2' => "The ADU English program is an English Learning establishment of
-              the African Development University that is focused on building the
-              English language proficiency of professionals, businessmen and
-              businesswomen etc.",
+    'studyAtADU' => [
+      'title' => 'Studying at A.D.U.',
+      'p' => 'African Development Universalis (A.D.U.) is a bilingual
+            establishment, with instruction in both French and English. We offer
+            fields of study within liberal arts framework for today’s most
+            in-demand jobs, taught by committed professors who challenge you to
+            think critically and creatively. From interactive classes to
+            internship and research, you will transform as you pursue your
+            passions! Our unique model – ILIMI; which means “education,
+            intellectual and knowledge” in Hausa, focuses on developing ethical
+            and impact driven young leaders.',
+      'advantages' => [
+        'p11' => '100%',
+        'p12' => 'Internships & Placement',
+        'p21' => '70%',
+        'p22' => 'Scholarships & Financial Aid',
+        'p31' => '70%',
+        'p32' => 'Women & Gender Equality',
+
+      ],
+    ],
+    'programs' => [
+      'title' => 'Overview of Programs',
+      'programs' => [
+        [
+          'title' =>  "Law",
+          'text' =>  "The degree in Business Law teaches courses in many different
+                aspects of legal work, with a strong commitment to justice and
+                equality and fighting corruption.",
+          'url' =>  "/storage/pages/home/programs/law.jpg",
+        ],
+        [
+          'title' => "Accounting & Finance",
+          'text' => "The degree in Accounting and Finance will train you to work as a financial examiner, or a financial analyst, or as a business consultant who helps guide small entrepreneurs.",
+          'url' => "/storage/pages/home/programs/accounting.jpg",
+        ],
+        [
+          'title' => "Project Management",
+          'text' => "The degree in Project Management trains young leaders to manage and ensure that complex projects go according to schedule.",
+          'url' => "/storage/pages/home/programs/project.jpg",
+        ],
+        [
+          'title' => "Management Information Systems",
+          'text' => "The degree in MIS will place you at the center of an exciting field by training you to create and manage new technologies.",
+          'url' => "/storage/pages/home/programs/mis.jpg",
+        ],
+        [
+          'title' => "Artificial Intelligence",
+          'text' => "The AI program equips young people with skills to develop intelligent systems and software that leverage data to solve societal and organizational issues.",
+          'url' => "/storage/pages/home/programs/ai.jpg",
+        ],
+        [
+          'title' => "English Program",
+          'text' => "The A.D.U. English program focuses on building the English language proficiency of students, professionals, and entreprenuers etc.",
+          'url' => "/storage/pages/home/programs/english.png",
+        ],
+      ]
+    ],
+    'welcome' => 'Welcome to the Future',
+    'partners' => [
+      'title' => 'Our Partners',
+      'ashesi' => [
+        'name' => 'Ashesi University',
+        'p1' => "With a ranking among the world's top 400 universities in the Times
+              Higher Education University Impact Rankings, in 2020, Ashesi
+              University is identified as one of the finest universities in
+              Africa.",
+        'p2' => "From the begining to this day, A.D.U has been mentored and
+              supported by Ashesi, both, not-for-profit institutions and having
+              similar missions regarding raising the bar for higher education in
+              Africa by educating ethical and entrepreneurial leaders.",
+        'p3' => "To fill the gap existing in higher education across the small
+              liberal arts colleges that are begining to establish in Africa,
+              Ashesi launched the Educative Collaboration, in which A.D.U. is
+              part of, in 2017.",
+        'link' => 'Visit Ashesi'
+      ],
+    ],
     'news' => [
       [
-        'title' => "Alkalami d’Or 2021",
+        'title' => "A.D.U. nominated as one of the  best Universities in Niger",
         'text' => "<p>A.D.U. was nominated, along with 3 other universities, as one of the best schools in the 8 regions of Niger.
 The announcement was made at a grand gala held at the Mahatma Gandhi Conference Center on November 7, 2021
 </p><p>The Alkalami d'Or are trophies that reward public and private schools as well as universities and institutes in the eight regions of Niger for their willingness to make academic and extracurricular excellence their battle horse. At A.D.U. academic excellence reigns as evidenced by the 100% success rate in the Brevet de Techniciens Supérieur d'Etat in June 2021.</p>",
@@ -49,7 +105,7 @@ The announcement was made at a grand gala held at the Mahatma Gandhi Conference 
         ]
       ],
       [
-        'title' => "Oualas at A.D.U.",
+        'title' => "Oualas, one of Africa's greatest comedians visit A.D.U.",
         'text' => "
         <p>On Friday, November 8 we received one of the funniest but also most inspiring visits. It was Oualas, one of the greatest African comedians, holder of the Best Comedian Award at the 1st edition of the Awards du Rire 2018.</p>
         <p>Oualas, whose real name is Tahar Lazrak, came to visit us after his show at the Hotel Noom in Niamey, where A.D.U. was a partner. The joy and happiness of meeting the world star could be seen on the faces of the YoungLeaders who did not hesitate to take as many pictures as possible with Oualas, a.k.a the most Moroccan Ivorian of them all!</p>
@@ -63,7 +119,7 @@ The announcement was made at a grand gala held at the Mahatma Gandhi Conference 
         ]
       ],
       [
-        'title' => "Global Entrepreneurship Week",
+        'title' => "IILab and CIPMEN organise training for entrepreneurs",
         'text' => "
         <p>On November 9th, during the Global Entrepreneurship Week, the iiLab, A.D.U.'s startup incubator, and the CIPMEN co-organized a training session called <q>Osez Entreprendre</q> (Dare to be entrepreneurial) for A.D.U.'s #YoungLeaders under the theme <q>Moringa Our Green Gold</q>.</p>
         <p>During this training, they were given different notions to reinforce what they are already learning with iiLab. Right after the training, a visit to the CIPMEN premises took place with entrepreneurs coming from all over Niamey to exhibit products derived from Moringa. This was followed by a pitch competition where the candidate, Khadija Ibrahim, a 3rd year student at A.D.U. won first place!</p>
@@ -77,32 +133,13 @@ The announcement was made at a grand gala held at the Mahatma Gandhi Conference 
         ]
       ],
     ],
-    'spotlight' => [
-      [
-        'title' => 'Guimbia means "Queen" in Haussa',
-        'text' => "Guimbia means Queen in Haussa, the second most spoken language in Africa. It is in honor of women that Hawa Hassane Gado, alias Hawa Guimbia, gave her company this evocative name. Hawa Guimbia created the first luxury cosmetics brand in Niger, Guimbia Beauty, with her 4 friends and partners, Adama Souley, Roumanatou Lamine and Ramatou Saley.",
-        'image' => '/storage/pages/home/spotlight/sl-1.jpg',
-      ],
-      [
-        'title' => 'Ramatou Saley Farka',
-        'text' => "Ramatou Saley Farka, nicknamed Boss Rama for her rigor when it comes to work, is one of the most promising students at A.D.U.
-Recently she was selected for the UGRAD scholarship which makes her the very first from Niger to access this opportunity. Rama is full of life and we are proud of her!
-About Guimbia
-",
-        'image' => '/storage/pages/home/spotlight/sl-2.jpg',
-      ],
-
-      [
-        'title' => 'Ramatou Saley Farka',
-        'text' => '',
-        'image' => '/storage/pages/home/spotlight/sl-3.jpg',
-      ],
-    ],
     'vm' => 'View More',
     'rm' => 'Read More',
     'me' => 'More Events',
     'va' => 'View all',
   ],
+
+
   'about' => [
     'banner' => 'A.D.U. is a rapidly growing non-profit organization and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you.',
     'link' => [
@@ -118,31 +155,13 @@ About Guimbia
     ],
     'welcome' => 'The mission of A.D.U. is to prepare the most talented young people in Francophone Africa to design and develop the development of their nations as ethical and effective leaders in the public, private and not-for-profit sectors.',
     'why' => [
-      'p1' => 'African Development University (A.D.U.) is an innovative
-            not-for-profit university with a mission to prepare the most
-            talented young people in Niger and in Francophone Africa to design
-            and drive the development of their nations as ethical and effective
-            leaders in the public, private and not-for-profit sectors. A.D.U. is
-            the first not-for-profit university located in Niamey, Niger, and is
-            the first institution to offer world-class education for students
-            from the Sahel region.',
+      'p1' => 'The mission of A.D.U. is to prepare the most talented young people in Niger and in Francophone Africa to design and drive the development of their nations as ethical and effective leaders in the public, private and not-for-profit sectors.',
       'p2' => [
-        'content' => 'Founded in October 2017, A.D.U. currently offers undergraduate
-            programs accredited by the Ministry of Research, Higher Education
-            and Innovation, Niger, an MBA program, as well as Executive Courses.
-            Over the next decade, A.D.U. aspires to become the hub of innovation
-            and excellence in higher education in West Africa. A.D.U. was
-            established to address two of the most pressing problems facing the
-            region:',
-        'l1' => 'The dearth of quality tertiary educational institutions.',
-        'l2' => 'The increasing cohort of young adults unprepared for participation and leadership in the 21st-century workforce.'
+        'content' => 'We offer training in liberal arts that aims to develop students\' critical thinking, problem-solving skills, and ability to serve their communities. A.D.U. is a bilingual institution (French and English) and is the first not-for-profit university in Niger to offer world-class education to students from the Sahel region. A.D.U. draws inspiration from the world\'s leading institutions of higher education such as Ashesi University in Ghana and Harvard University in the US. Founded in October 2017, A.D.U. has served a total of 250+ students of which 60% of our student population are female. From our initial student cohort (Obama Cohort), up to 90% of the entire student population, (now Alumni) are engaged in entrepreneurial ventures, working in fulltime jobs, as well as exploring graduate school opportunities.',
       ],
-      'p3' => 'Niger is a rapidly growing country of 20 million people, and our desire is to
-              train a new generation of skilled, ethical leaders is motivated by
-              our commitment to advance Niger’s development and improve living
-              standards for all. Ultimately, through our work, we aim to advance
-              the quality of human capital of countries throughout the Sahel and
-              across the African continent.',
+      'p3' => 'A.D.U. was established to address two of the most pressing problems facing the Sahel region i.e., the dearth of quality tertiary education institutions and the increasing cohort of young adults unprepared for participation and leadership in the 21st Century workforce. From inception to date, A.D.U. has played a leading role in changing the narrative that quality education is impossible to get most especially from the Sahel region of Africa. From an enrolment rate of 35 when we launched in 2017 to an enrolment rate of 524 in 2019, we have witnessed wide acceptance for our programs. We have also prioritized opening access to opportunities for young people, whereby 70% of our students receive some form of financial aid. This has enabled bright students from underserved communities to study at our institution, which was something that wouldn’t have been erstwhile possible. 
+Our unique model – ILIMI; which means “education, intellectual and knowledge” in Hausa, focuses on developing ethical and impact driven young leaders.
+',
       'btnMore' => 'view more',
       'btnLess' => 'view less',
     ]
@@ -506,16 +525,13 @@ This office focuses on employer relations at the national and international leve
     'banner' => 'Student life typically involves social activities within the A.D.U. campus, and the time spent with school-mates and teachers within the class and outside. The goal of student life is to create a good environment where students will grow and have a very good experience during their academic journey at A.D.U.'
   ],
   'navigation' => [
-    '1' => 'About A.D.U.',
-    '2' => 'Study at A.D.U.',
-    '3' => 'Academics',
-    '4' => 'Apply',
-    '5' => 'Gallery',
-    '6' => 'Donate',
-    '7' => 'Student Life',
-    '8' => 'My Ilimi',
-    '9' => 'Language',
-    '10' => 'IILab',
+    '1' => 'About',
+    '2' => 'Study',
+    '3' => 'IILab',
+    '4' => 'Student Life',
+    '5' => 'Apply',
+    '6' => 'Enquire',
+    '7' => 'Donate',
   ],
   'footer' => [
     'email' => 'Email',

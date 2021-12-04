@@ -2,9 +2,15 @@
   <section class="page">
     <aside class="page__side__nav">
       <ul>
-        <li><Link>Apply</Link></li>
-        <li><Link>Enquire</Link></li>
-        <li><Link>Donate</Link></li>
+        <li>
+          <Link>{{ $t("pages.navigation.5") }}</Link>
+        </li>
+        <li>
+          <Link>{{ $t("pages.navigation.6") }}</Link>
+        </li>
+        <li>
+          <Link>{{ $t("pages.navigation.7") }}</Link>
+        </li>
       </ul>
     </aside>
     <nav
@@ -26,9 +32,11 @@
       <ul class="navigation__links">
         <li class="navigation__links__link lang">
           <ul>
-            <li class="active"><Link>EN</Link></li>
-            <li>
-              <Link>FR</Link>
+            <li :class="[getLocale === 'en' && 'active']">
+              <a role="button" @click="changeLocale('en')">EN</a>
+            </li>
+            <li :class="[getLocale === 'fr' && 'active']">
+              <a role="button" @click="changeLocale('fr')">FR</a>
             </li>
           </ul>
         </li>
@@ -49,9 +57,15 @@
         <portal-target name="cta"> </portal-target>
         <div class="page__mobile__nav">
           <ul>
-            <li><Link>Apply</Link></li>
-            <li><Link>Enquire</Link></li>
-            <li><Link>Donate</Link></li>
+            <li>
+              <Link>{{ $t("pages.navigation.5") }}</Link>
+            </li>
+            <li>
+              <Link>{{ $t("pages.navigation.6") }}</Link>
+            </li>
+            <li>
+              <Link>{{ $t("pages.navigation.7") }}</Link>
+            </li>
           </ul>
         </div>
       </section>
@@ -213,26 +227,7 @@
               </div>
             </li>
             <li>
-              <Link href="/academics">{{ $t("pages.navigation.3") }}</Link>
-              <div class="dropdown">
-                <h1 class="dropdown__title">
-                  {{ $t("pages.navigation.3") }}
-                </h1>
-                <ul class="dropdown__links">
-                  <li>
-                    <Link>{{ $t("pages.academics.link.1") }}</Link>
-                  </li>
-                  <li>
-                    <Link>{{ $t("pages.academics.link.2") }}</Link>
-                  </li>
-                  <li>
-                    <Link>{{ $t("pages.academics.link.3") }}</Link>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <Link href="/iilab">{{ $t("pages.navigation.10") }}</Link>
+              <Link href="/iilab">{{ $t("pages.navigation.3") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.10") }}
@@ -251,7 +246,7 @@
               </div>
             </li>
             <li>
-              <Link href="/student-life">{{ $t("pages.navigation.7") }}</Link>
+              <Link href="/student-life">{{ $t("pages.navigation.4") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.7") }}
@@ -266,14 +261,14 @@
                 </ul>
               </div>
             </li>
-            <li>
+            <!-- <li>
               <a
                 href=" https://myilimilms.net/moodle"
                 target="_blank"
                 rel="noopener noreferrer"
                 >{{ $t("pages.navigation.8") }}</a
               >
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -300,6 +295,9 @@ export default {
     getBannerPageClass() {
       return this.bannerPageClass;
     },
+    getLocale() {
+      return this.locale;
+    },
   },
   created() {
     this.$inertia.on("navigate", (event) => {
@@ -325,6 +323,10 @@ export default {
       }
     });
   },
+  beforeMount() {
+    this.setLocale();
+  },
+
   mounted() {
     window.addEventListener("scroll", () => {
       this.scrollPosition = window.scrollY;
@@ -343,10 +345,42 @@ export default {
       toggleNav: false,
       pageLoader: false,
       bannerPageClass: "",
+      locale: "",
     };
   },
 
-  methods: {},
+  methods: {
+    changeLocale(locale) {
+      Inertia.visit(`/locale/${locale}`, {
+        preserveScroll: true,
+        onSuccess: (page) => {
+          this.locale = locale;
+          const now = new Date();
+          now.setDate(now.getDate() + 7);
+          document.cookie = `locale=${locale}; expires=${now.toUTCString()}; SameSite=Lax; Secure`;
+          this.$lang.setLocale(locale);
+        },
+      });
+    },
+
+    setLocale() {
+      if (
+        document.cookie
+          .split(";")
+          .some((item) => item.trim().startsWith("locale="))
+      ) {
+        const lang = document.cookie
+          .split(";")
+          .find((item) => item.startsWith("locale="))
+          .split("=")[1];
+        this.$lang.setLocale(lang);
+        this.locale = lang;
+      } else {
+        this.$lang.setLocale(navigator.language.split("-")[0]);
+        this.locale = navigator.language.split("-")[0];
+      }
+    },
+  },
 };
 </script>
 

@@ -23,6 +23,11 @@ Route::get('/config', function () {
   return 'Done';
 });
 
+Route::get('/locale/{locale}', function ($locale) {
+  Session()->put('locale', $locale);
+  return redirect()->back();
+})->name('locale');
+
 Route::get('/', 'PageController@index')->name('home');
 Route::get('/about', 'PageController@about')->name('about');
 Route::get('/study-at-adu', 'PageController@studyAtADU')->name('studyAtADU');

@@ -1122,6 +1122,11 @@ a.read-more-btn:hover {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 35.999em) {
+  .partner__logo {
+    height: 13rem;
+  }
+}
 
 .top__bar__nav {
   width: 100%;
@@ -2523,6 +2528,7 @@ a:active {
   opacity: 0;
   transition: all 0.3s ease-in;
   border-left: #88868644 solid 1px;
+  display: none;
 }
 .page .nav__drawer .nav__drawer__content__navs__links > li .dropdown__title {
   text-align: center;
@@ -3000,7 +3006,6 @@ a:active {
 .home__our__programs {
   width: 100%;
   padding: 0 10rem;
-  background-color: transparent;
 }
 .home__our__programs__title {
   padding: 0;
@@ -3008,7 +3013,12 @@ a:active {
 }
 @media only screen and (max-width: 61.999em) {
   .home__our__programs {
-    padding: 5rem 2rem;
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 35.999em) {
+  .home__our__programs {
+    width: 100%;
   }
 }
 .home__our__programs__cards {
@@ -3029,11 +3039,12 @@ a:active {
 @media only screen and (max-width: 35.999em) {
   .home__our__programs__cards__card {
     width: calc(100% - (0.5rem * 2));
-    height: 25rem;
+    height: 30rem;
     margin: 0;
     margin-left: 0;
     width: calc(100% - (0 * 2));
     margin-bottom: 2rem;
+    margin-right: 0;
   }
 }
 .home__our__programs__cards__card > .front {
@@ -3086,9 +3097,12 @@ a:active {
   visibility: visible;
   opacity: 1;
 }
-@media only screen and (max-width: 61.999em) {
-  .home__our__programs__cards__card {
-    padding: 3rem 3rem;
+@media only screen and (max-width: 35.999em) {
+  .home__our__programs__cards__card > .front > .image {
+    height: 25rem;
+  }
+  .home__our__programs__cards__card > .front > .title {
+    height: 5rem;
   }
 }
 .home__study__adu {
@@ -3293,11 +3307,26 @@ a:active {
   padding: 0;
   padding-bottom: 3rem;
 }
+@media only screen and (max-width: 61.999em) {
+  .home__partners {
+    padding: 0 2rem;
+  }
+}
+@media only screen and (max-width: 35.999em) {
+  .home__partners {
+    width: 100%;
+  }
+}
 .home__partners__ashesi {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+@media only screen and (max-width: 35.999em) {
+  .home__partners__ashesi {
+    flex-direction: column;
+  }
 }
 .home__partners__ashesi__image {
   width: 30%;
@@ -3307,9 +3336,21 @@ a:active {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 35.999em) {
+  .home__partners__ashesi__image {
+    width: 100%;
+    height: 45rem;
+  }
+}
 .home__partners__ashesi__text {
   width: 70%;
   padding: 5rem;
+}
+@media only screen and (max-width: 35.999em) {
+  .home__partners__ashesi__text {
+    width: 100%;
+    padding: 0;
+  }
 }
 .home__partners__ashesi__text > .title {
   text-transform: capitalize;
@@ -3330,6 +3371,19 @@ a:active {
 }
 .home__partners__logos {
   margin-top: 3rem;
+}
+@media only screen and (max-width: 61.999em) {
+  .home__partners__logos .vueperslides__arrow {
+    display: none;
+  }
+}
+@media only screen and (max-width: 35.999em) {
+  .home__partners__logos {
+    margin-top: 5rem;
+  }
+  .home__partners__logos .vueperslides__arrow {
+    display: none;
+  }
 }
 .home__spotlight {
   width: 100%;
@@ -3531,7 +3585,7 @@ a:active {
 }
 .about__leadership {
   width: 100%;
-  padding: 5rem 10rem;
+  padding: 10rem 10rem;
 }
 @media only screen and (max-width: 61.999em) {
   .about__leadership {
@@ -3540,7 +3594,6 @@ a:active {
 }
 .about__leadership__title {
   padding: 3rem 0;
-  text-transform: capitalize;
 }
 .about__leadership__container {
   width: 100%;
@@ -3968,9 +4021,10 @@ a:active {
 }
 .academics__majors__program__text > .article {
   margin-bottom: 0.5rem;
+  padding-right: 5rem;
 }
 .academics__majors__program__text > .article > p:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .academics__majors__program__text > .article > .values__list {
   list-style-type: square;
@@ -3980,12 +4034,18 @@ a:active {
   color: #262626;
   font-weight: bold;
 }
+.academics__majors__program__text > .article > .values__list > li p {
+  margin-bottom: 2rem;
+}
 .academics__majors__program__text > .view__more {
   justify-content: flex-start;
   align-items: center;
 }
 .academics__majors__program.image--right {
   flex-direction: row-reverse;
+}
+.academics__majors__program.image--right > .image--right--image.img-xx {
+  width: 50%;
 }
 .academics__majors__program.image--right > .image--right--text {
   padding: 3rem 3rem 3rem 0;

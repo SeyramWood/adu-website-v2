@@ -38,7 +38,7 @@
     <section class="about__our__why">
        <h1 class="about__welcome__title title--primary" data-aos="fade-up"
           data-aos-duration="1000"
-          data-aos-anchor-placement="bottom-bottom">Our why</h1>
+          data-aos-anchor-placement="bottom-bottom">Our Why</h1>
        <p
        data-aos="fade-up"
           data-aos-duration="1500"
@@ -94,7 +94,7 @@
                <h3>Leadership</h3>
                <ul>
                  <li>
-                   We believe that every problem is solvable when we commit the necessary time, creativity, energy, and grit. Every day, we search for better, more efficient ways to serve our community and we take personal responsibility for this.
+                   <p>We believe that every problem is solvable when we commit the necessary time, creativity, energy, and grit. Every day, we search for better, more efficient ways to serve our community and we take personal responsibility for this.</p>
                  </li>
                </ul>
              </li>
@@ -102,7 +102,7 @@
                <h3>Excellence</h3>
                <ul>
                  <li>
-                   We recognize that excellence is both technical and ethical and we take pride in our work. We strive to become a world-class institution. We never compromise on our values, and we never take short courts.
+                   <p>We recognize that excellence is both technical and ethical and we take pride in our work. We strive to become a world-class institution. We never compromise on our values, and we never take short courts.</p>
                  </li>
                </ul>
              </li>
@@ -110,7 +110,7 @@
                <h3>Innovation</h3>
                <ul>
                  <li>
-                   We consistently strive to find new ways to do better, to think out of the box, to use available local resources, and create models and solutions that have not been imagined or implemented yet.
+                  <p> We consistently strive to find new ways to do better, to think out of the box, to use available local resources, and create models and solutions that have not been imagined or implemented yet.</p>
                  </li>
                </ul>
              </li>
@@ -150,7 +150,7 @@
           data-aos-duration="1000"
           data-aos-anchor-placement="bottom-bottom">Join Our Team</h1>
       <div class="academics__majors__program image--right">
-        <div class="academics__majors__program__image image--right--image">
+        <div class="academics__majors__program__image image--right--image img-xx">
           <img src="/storage/pages/about/our-team.jpg" alt="" srcset="" />
         </div>
         <div class="academics__majors__program__text image--right--text">

@@ -8,28 +8,27 @@
           data-aos-duration="1200"
           data-aos-anchor-placement="bottom-bottom"
         >
-          ILIMI, African Development Universalis
+          {{ $t("pages.home.banner.p") }}
         </p>
         <h1 class="text">
-          <span>Changing the future</span><br />
-          <span>of the Sahel.</span>
-          <!-- Start your studies of one of our Bachelors degrees or Professional
-          programmes on our campus in hybrid teaching mode! -->
+          <span>{{ $t("pages.home.banner.h1") }}</span
+          ><br />
+          <span>{{ $t("pages.home.banner.h2") }}</span>
         </h1>
       </section>
     </portal>
 
     <section class="home__values">
       <div class="home__values__link">
-        <h6>{{ $t("pages.home.title.1") }}</h6>
+        <h6>{{ $t("pages.home.values.1") }}</h6>
       </div>
       <div class="home__values__line"></div>
       <div class="home__values__link">
-        <h6>{{ $t("pages.home.title.3") }}</h6>
+        <h6>{{ $t("pages.home.values.3") }}</h6>
       </div>
       <div class="home__values__line"></div>
       <div class="home__values__link">
-        <h6>{{ $t("pages.home.title.2") }}</h6>
+        <h6>{{ $t("pages.home.values.2") }}</h6>
       </div>
     </section>
     <section class="admissions__advantage">
@@ -40,7 +39,7 @@
           data-aos-anchor-placement="bottom-bottom"
           data-aos-duration="1000"
         >
-          Studying at A.D.U.
+          {{ $t("pages.home.studyAtADU.title") }}
         </h1>
         <div class="admissions__advantage__text">
           <p
@@ -48,33 +47,34 @@
             data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="1500"
           >
-            A.D.U is a bilingual establishment, with instruction in both French
-            and English. We offer fields of study within liberal arts framework
-            for today’s most in-demand jobs, taught by committed professors who
-            challenge you to think critically and creatively. From interactive
-            classes to internship and research, you will transform as you pursue
-            your passions!
+            {{ $t("pages.home.studyAtADU.p") }}
           </p>
         </div>
       </div>
       <div class="admissions__advantage__advantages">
         <div class="admissions__advantage__advantages__badge">
-          <p class="percentage">100%</p>
-          <p class="text">Internships & Placement</p>
+          <p class="percentage">
+            {{ $t("pages.home.studyAtADU.advantages.p11") }}
+          </p>
+          <p class="text">{{ $t("pages.home.studyAtADU.advantages.p12") }}</p>
         </div>
         <div class="admissions__advantage__advantages__badge">
-          <p class="percentage">70%</p>
-          <p class="text">Scholarships & Financial Aid</p>
+          <p class="percentage">
+            {{ $t("pages.home.studyAtADU.advantages.p21") }}
+          </p>
+          <p class="text">{{ $t("pages.home.studyAtADU.advantages.p22") }}</p>
         </div>
         <div class="admissions__advantage__advantages__badge">
-          <p class="percentage">70%</p>
-          <p class="text">Women & Gender Equality</p>
+          <p class="percentage">
+            {{ $t("pages.home.studyAtADU.advantages.p31") }}
+          </p>
+          <p class="text">{{ $t("pages.home.studyAtADU.advantages.p32") }}</p>
         </div>
       </div>
     </section>
     <section class="home__our__programs">
       <h1 class="home__our__programs__title title--primary">
-        Overview of Programs
+        {{ $t("pages.home.programs.title") }}
       </h1>
       <div class="home__our__programs__cards">
         <div
@@ -107,7 +107,7 @@
         data-aos-anchor-placement="bottom-bottom"
         data-aos-duration="1000"
       >
-        Welcome to the Future
+        {{ $t("pages.home.welcome") }}
       </h1>
       <div class="home__study__adu__video">
         <vueper-slides
@@ -128,7 +128,7 @@
         data-aos-anchor-placement="bottom-bottom"
         data-aos-duration="1000"
       >
-        Our Partners
+        {{ $t("pages.home.partners.title") }}
       </h1>
 
       <div class="home__partners__ashesi">
@@ -136,37 +136,28 @@
           <img src="/storage/pages/home/ashesi.jpg" alt="" srcset="" />
         </div>
         <div class="home__partners__ashesi__text">
-          <h3 class="title">Ashesi University</h3>
+          <h3 class="title">{{ $t("pages.home.partners.ashesi.name") }}</h3>
           <article class="article">
             <p
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1500"
             >
-              With a ranking among the world's top 400 universities in the Times
-              Higher Education University Impact Rankings, in 2020, Ashesi
-              University is identified as one of the finest universities in
-              Africa.
+              {{ $t("pages.home.partners.ashesi.p1") }}
             </p>
             <p
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1500"
             >
-              From the begining to this day, A.D.U has been mentored and
-              supported by Ashesi, both, not-for-profit institutions and having
-              similar missions regarding raising the bar for higher education in
-              Africa by educating ethical and entrepreneurial leaders.
+              {{ $t("pages.home.partners.ashesi.p2") }}
             </p>
             <p
               data-aos="fade-up"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1500"
             >
-              To fill the gap existing in higher education across the small
-              liberal arts colleges that are begining to establish in Africa,
-              Ashesi launched the Educative Collaboration, in which A.D.U. is
-              part of, in 2017.
+              {{ $t("pages.home.partners.ashesi.p3") }}
             </p>
           </article>
 
@@ -175,7 +166,7 @@
               href="https://www.ashesi.edu.gh/"
               target="_blank"
               rel="noopener noreferrer"
-              >Visit Ashesi</a
+              >{{ $t("pages.home.partners.ashesi.link") }}</a
             >
           </div>
         </div>
@@ -216,72 +207,39 @@
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom"
           data-aos-duration="1000"
+          v-for="n in news"
+          :key="n.title"
         >
           <div class="title">
-            <Link>
-              {{
-                `A.D.U. nominated as one of the  best Universities in Niger`.substring(
-                  0,
-                  140
-                )
-              }}
-            </Link>
+            <a ref="javascript:" @click="getNewsData(n)" role="button">
+              {{ `${n.title}`.substring(0, 120) }}
+            </a>
           </div>
           <div class="line"></div>
           <div class="text">
-            {{
-              `The announcement was made at a grand gala held at the Mahatma Gandhi Conference Center on November 7, 2021.`
-            }}
-          </div>
-        </div>
-        <div
-          class="home__news__articles__article"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1500"
-        >
-          <div class="title">
-            <Link>
-              {{
-                `Oualas, one of Africa's greatest comedians visit A.D.U.`.substr(
-                  0,
-                  140
-                )
-              }}
-            </Link>
-          </div>
-          <div class="line"></div>
-          <div class="text">
-            {{
-              `It was Oualas, one of the greatest African comedians, holder of the Best Comedian Award at the 1st edition of the Awards du Rire 2018.`
-            }}
-          </div>
-        </div>
-        <div
-          class="home__news__articles__article"
-          data-aos="fade-up"
-          data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1000"
-        >
-          <div class="title">
-            <Link>
-              {{
-                `iiLab and CIPMEN organise training for entrepreneurs`.substr(
-                  0,
-                  140
-                )
-              }}
-            </Link>
-          </div>
-          <div class="line"></div>
-          <div class="text">
-            {{
-              `On November 9th, the iiLab, A.D.U.'s startup incubator, and the CIPMEN co-organized a training session called Osez Entreprendre (Dare to be entrepreneurial) for A.D.U.'s #YoungLeaders under the theme Moringa Our Green Gold.`
-            }}
+            <p v-html="n.text.substring(0, 180)"></p>
           </div>
         </div>
       </div>
     </section>
+
+    <s-modal v-model="newsModal" width="50rem">
+      <div class="event-details" v-if="currentNews">
+        <!-- <div class="image">
+          <vueper-slides slide autoplay :touchable="false" fixed-height="30rem">
+            <vueper-slide
+              v-for="(image, i) in currentNews.images"
+              :key="i"
+              :image="image"
+              style="height: 100%"
+            />
+          </vueper-slides>
+        </div> -->
+        <h1>{{ currentNews.title }}</h1>
+
+        <div v-html="currentNews.text"></div>
+      </div>
+    </s-modal>
   </section>
 </template>
 
@@ -290,6 +248,7 @@ import WebsiteLayout from "../../components/WebsiteLayout";
 import { Link } from "@inertiajs/inertia-vue";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+import SModal from "../../components/SModal";
 export default {
   name: "Home",
   layout: WebsiteLayout,
@@ -297,10 +256,24 @@ export default {
     Link,
     VueperSlides,
     VueperSlide,
+    SModal,
   },
-
+  mounted() {
+    this.$watch(
+      () => this.$lang.locale,
+      (locale) => {
+        this.news = this.$lang.messages[`${locale}.pages`].home.news;
+        this.programs =
+          this.$lang.messages[`${locale}.pages`].home.programs.programs;
+      },
+      { immediate: true }
+    );
+  },
   data() {
     return {
+      newsModal: false,
+      currentNews: null,
+      news: [],
       video: {
         title: "Welcome to the Future",
         video: {
@@ -312,40 +285,7 @@ export default {
           },
         },
       },
-      programs: [
-        {
-          title: "Law",
-          text: `The degree in Business Law teaches courses in many different
-                aspects of legal work, with a strong commitment to justice and
-                equality and fighting corruption.`,
-          url: "/storage/pages/home/programs/law.jpg",
-        },
-        {
-          title: "Accounting",
-          text: `The degree in Accounting and Finance will train you to work as a financial examiner, or a financial analyst, or as a business consultant who helps guide small entrepreneurs.`,
-          url: "/storage/pages/home/programs/accounting.jpg",
-        },
-        {
-          title: "Project Management",
-          text: `The degree in Project Management trains young leaders to manage and ensure that complex projects go according to schedule.`,
-          url: "/storage/pages/home/programs/project.jpg",
-        },
-        {
-          title: "MIS",
-          text: `The degree in MIS will place you at the center of an exciting field by training you to create and manage new technologies.`,
-          url: "/storage/pages/home/programs/mis.jpg",
-        },
-        {
-          title: "Artificial Intellgence",
-          text: `The AI program equips young people with skills to develop intelligent systems and software that leverage data to solve societal and organizational issues.`,
-          url: "/storage/pages/home/programs/ai.jpg",
-        },
-        {
-          title: "English Program",
-          text: `The A.D.U. English program focuses on building the English language proficiency of students, professionals, and entreprenuers etc.`,
-          url: "/storage/pages/home/programs/english.png",
-        },
-      ],
+      programs: [],
       partners: [
         `<div class="partner__logo">
             <img src="/storage/pages/home/partners/ashesi.jpg" alt="ashesi logo" srcset="">
@@ -367,6 +307,15 @@ export default {
           </div>`,
       ],
     };
+  },
+
+  methods: {
+    getNewsData(news) {
+      this.currentNews = news;
+      this.$nextTick(() => {
+        this.newsModal = !this.newsModal;
+      });
+    },
   },
 };
 </script>

@@ -330,7 +330,7 @@
                             opacity: 0;
                             transition: all 0.3s ease-in;
                             border-left: $line solid 1px;
-
+                            display: none;
                             &__title {
                                 text-align: center;
                                 padding: 3rem 0;

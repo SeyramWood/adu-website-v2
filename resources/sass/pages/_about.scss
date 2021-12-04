@@ -68,7 +68,7 @@
     }
     &__leadership {
         width: 100%;
-        padding: 5rem $container-padding;
+        padding: 10rem $container-padding;
 
         @include respond-down(md) {
             padding: 0 $container-padding-xs;
@@ -76,7 +76,6 @@
         }
         &__title {
             padding: 3rem 0;
-            text-transform: capitalize;
         }
         &__container {
             width: 100%;
