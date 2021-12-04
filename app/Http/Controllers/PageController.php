@@ -14,9 +14,9 @@ class PageController extends Controller
     {
         return inertia('FrontEnd/About');
     }
-    public function admissions()
+    public function studyAtADU()
     {
-        return inertia('FrontEnd/Admissions');
+        return inertia('FrontEnd/StudyAtADU');
     }
     public function academics()
     {

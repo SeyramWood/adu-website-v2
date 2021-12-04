@@ -160,7 +160,7 @@
 @mixin grid-column($width, $height, $gutter) {
     height: $height;
     margin: $gutter;
-    // margin-left: 0;
+    margin-left: 0;
     width: calc(#{$width} - (#{$gutter} * 2));
 }
 @mixin grid-row {

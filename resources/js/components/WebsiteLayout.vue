@@ -191,7 +191,7 @@
               </div>
             </li>
             <li>
-              <Link href="/admissions">{{ $t("pages.navigation.2") }}</Link>
+              <Link href="/study-at-adu">{{ $t("pages.navigation.2") }}</Link>
               <div class="dropdown">
                 <h1 class="dropdown__title">
                   {{ $t("pages.navigation.2") }}
@@ -307,8 +307,8 @@ export default {
         case "/about":
           this.bannerPageClass = "banner--secondary about";
           break;
-        case "/admissions":
-          this.bannerPageClass = "banner--secondary admissions";
+        case "/study-at-adu":
+          this.bannerPageClass = "banner--secondary study-at-adu";
           break;
         case "/academics":
           this.bannerPageClass = "banner--secondary academics";

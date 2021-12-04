@@ -24,15 +24,18 @@
         data-aos-duration="1000"
         data-aos-anchor-placement="bottom-bottom"
       >
-        Business Administration (Featured Majors)
+        Business Administration
       </h1>
-      <div class="academics__majors__cards__container">
-        <div class="academics__majors__cards">
-          <div class="academics__majors__cards__card">
-            <div class="icon">
-              <v-icon>mdi-gavel</v-icon>
+      <section class="academics__majors__program">
+          <div class="academics__majors__program__wrapper">
+            <div class="image">
+              <img src="/storage/pages/academics/woman.jpg" alt="Program Image" srcset="">
             </div>
-            <div class="content">
+            <div class="programs">
+              <h3 class="title" data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-anchor-placement="bottom-bottom">Featured Majors</h3>
+              <div class="content">
               <h3 class="academics__majors__cards__card__title">
                 Bachelor of Business Law
               </h3>
@@ -47,24 +50,16 @@
                 Public Jurisdictions, Legal Consultant, Notary Public.
               </p>
             </div>
-          </div>
-          <div class="academics__majors__cards__card">
-            <div class="icon">
-              <v-icon>mdi-chart-bar-stacked</v-icon>
-            </div>
-            <div class="content">
+              <div class="content">
               <h3 class="academics__majors__cards__card__title">
-                Project Management
+                Bachelor in Project Management
               </h3>
               <p data-aos="fade-up"
         data-aos-duration="1500"
         data-aos-anchor-placement="bottom-bottom">
                 Project Managers are trained to make certain that complex
                 projects go according to schedule. Project management positions
-                are essential in construction and civil engineering etc. These
-                types of projects include building new infrastructures such as
-                bridges and office buildings, as well as repairing old
-                infrastructures, such as homes or businesses. In keeping with
+                are essential in construction and civil engineering etc. In keeping with
                 the Ilimi concept, each course is designed and taught with a
                 thread of ethical conduct woven through it to reinforce the
                 responsibility of graduates to press ethical practice in their
@@ -72,13 +67,6 @@
                 injustice and to make the world a better place for the less
                 fortunate.
               </p>
-            </div>
-          </div>
-        </div>
-        <div class="academics__majors__cards">
-          <div class="academics__majors__cards__card">
-            <div class="icon">
-              <v-icon>mdi-currency-usd</v-icon>
             </div>
             <div class="content">
               <h3 class="academics__majors__cards__card__title">
@@ -94,36 +82,7 @@
                 to detail.
               </p>
 
-              <p data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-anchor-placement="bottom-bottom">
-                <strong>Financial Examiner:</strong> With a career as a
-                financial examiner, you’ll help ensure compliance with laws
-                governing banks and how they lend money, Or, you could be
-                responsible for analyzing the financial strength of a business
-                that is looking to expand.
-              </p>
-              <p data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-anchor-placement="bottom-bottom">
-                <strong>Financial Analyst:</strong> You can expect to work with
-                individuals and organizations to make strategic decisions based
-                on investments
-              </p>
-
-              <p data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-anchor-placement="bottom-bottom">
-                <strong>Business and Financial Consultant:</strong> As a
-                business consultant, you can help other business owners manage
-                start-up costs and investments, create a financial plan for
-                their business and monitor day-to-day bookkeeping.
-              </p>
-            </div>
-          </div>
-          <div class="academics__majors__cards__card">
-            <div class="icon">
-              <v-icon>mdi-desktop-classic</v-icon>
+             
             </div>
             <div class="content">
               <h3 class="academics__majors__cards__card__title">
@@ -137,24 +96,10 @@
                 practical. You will not only learn the theory but also get the
                 opportunity to make things.
               </p>
-              <p data-aos="fade-up"
-        data-aos-duration="1500"
-        data-aos-anchor-placement="bottom-bottom">
-                Technology positions available in IT often include jobs such as
-                creating software, analyzing new forms of data, and developing
-                solutions for today's highly technological world. In the next
-                ten-years Niger will be fully digital and nearly every company
-                and organization will be using digital technology. A.D.U.’s
-                program will place you into the center of that exciting field by
-                training you to create new technologies. Security will also be
-                in large demand, people will want their mobiles and laptops to
-                be secure from hackers and from people trying to steal their
-                personal information.
-              </p>
+            </div>
             </div>
           </div>
-        </div>
-      </div>
+      </section>
     </section>
     <section class="academics__ai">
       <div class="academics__ai__wrapper">
@@ -216,7 +161,7 @@
             The ADU English program is an English Learning establishment of the African Development University that is focused on building the English language proficiency of professionals, businessmen and businesswomen etc., especially in the francophone region and is committed to taking learners through an exciting language learning journey with courses tailored to give learners an all-round study of the language.
             <v-btn
               text
-              class="color-dark"
+              class="color-primary"
               @click="showMoreEp = true"
               v-show="!showMoreEp"
               >{{ $t('pages.about.why.btnMore') }}</v-btn
@@ -229,13 +174,32 @@
            
           </p>
           <p>
-              {{ $t('pages.about.why.p3') }} <v-btn text class="color-dark" @click="showMoreEp = false"
+              {{ $t('pages.about.why.p3') }} <v-btn text class="color-primary" @click="showMoreEp = false"
               >{{ $t('pages.about.why.btnLess') }}</v-btn
             >
             </p>
             
           </article>
      </div>
+    </section>
+
+    <section class="academics__learn__more">
+      <div class="academics__learn__more__wrapper">
+        <h1 class="title">Learn More</h1>
+        <p class="text">A.D.U. is committed to ensuring high-quality learning experiences that transform students for global citizenship and individual excellence. Prepare for your next step and explore our community resources.</p>
+        <div class="links">
+          <ul class="links__wrapper">
+            <li><Link href="/admission">Admission</Link></li>
+            <li><Link href="/admission">Apply Now</Link></li>
+          </ul><ul class="links__wrapper">
+            <li><Link href="/iilab">IIlab</Link></li>
+            <li><Link href="/student-life">Student Life</Link></li>
+          </ul><ul class="links__wrapper">
+            <li><Link href="#">Enquire</Link></li>
+            <li><Link href="#">Donate</Link></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </section>
 </template>

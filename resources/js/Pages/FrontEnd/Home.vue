@@ -77,87 +77,24 @@
         Overview of Programs
       </h1>
       <div class="home__our__programs__cards">
-        <div class="home__our__programs__cards__card">
-          <h1
-            class="title"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-anchor-placement="bottom-bottom"
-          >
-            Business Administration
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-anchor-placement="bottom-bottom"
-          >
-            A.D.U. offers a three-year bachelor's degree in Business
-            Administration with majors in Law, Management, Accounting and MIS.
-          </p>
-          <div class="link">
-            <a
-              href="https://aduilimi-my.sharepoint.com/:b:/g/personal/fafagnibo_ilimi_edu_ne/Efz0yLO5bV1AkPv22eCnkKsBn13Yy1sUJkBTASqsSC2sGw?e=7vG1V8"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Read more</a
-            >
-
-            <span>&rarr;</span>
+        <div
+          class="home__our__programs__cards__card"
+          v-for="program in programs"
+          :key="program.title"
+        >
+          <div class="front">
+            <div class="image">
+              <img :src="program.url" alt="law" srcset="" />
+            </div>
+            <h1 class="title">{{ program.title }}</h1>
           </div>
-        </div>
-        <div class="home__our__programs__cards__card">
-          <h1
-            class="title"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-anchor-placement="bottom-bottom"
-          >
-            Artificial Intelligence
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-anchor-placement="bottom-bottom"
-          >
-            The Bachelor of Science in Artificial Intelligence - BS(AI) program
-            provides learners the knowledge and skills to provide solution to
-            complex problems.
-          </p>
-          <div class="link">
-            <a
-              href="https://applications.eduappgh.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Read more</a
-            >
-            <span>&rarr;</span>
-          </div>
-        </div>
-        <div class="home__our__programs__cards__card">
-          <h1
-            class="title"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-anchor-placement="bottom-bottom"
-          >
-            English Program
-          </h1>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            data-aos-anchor-placement="bottom-bottom"
-          >
-            The A.D.U. English program focuses on building the English language
-            proficiency of students, professionals, and entreprenuers etc.
-          </p>
-          <div class="link">
-            <a
-              href="https://applications.eduappgh.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Read more</a
-            >
-            <span>&rarr;</span>
+          <div class="back">
+            <Link href="/study-at-adu">
+              <h1 class="title">{{ program.title }}</h1>
+              <p class="text">
+                {{ program.text }}
+              </p>
+            </Link>
           </div>
         </div>
       </div>
@@ -180,6 +117,86 @@
           :fixed-height="true"
         >
           <vueper-slide :video="video.video" />
+        </vueper-slides>
+      </div>
+    </section>
+
+    <section class="home__partners">
+      <h1
+        class="home__partners__title title--primary"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1000"
+      >
+        Our Partners
+      </h1>
+
+      <div class="home__partners__ashesi">
+        <div class="home__partners__ashesi__image">
+          <img src="/storage/pages/home/ashesi.jpg" alt="" srcset="" />
+        </div>
+        <div class="home__partners__ashesi__text">
+          <h3 class="title">Ashesi University</h3>
+          <article class="article">
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1500"
+            >
+              With a ranking among the world's top 400 universities in the Times
+              Higher Education University Impact Rankings, in 2020, Ashesi
+              University is identified as one of the finest universities in
+              Africa.
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1500"
+            >
+              From the begining to this day, A.D.U has been mentored and
+              supported by Ashesi, both, not-for-profit institutions and having
+              similar missions regarding raising the bar for higher education in
+              Africa by educating ethical and entrepreneurial leaders.
+            </p>
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1500"
+            >
+              To fill the gap existing in higher education across the small
+              liberal arts colleges that are begining to establish in Africa,
+              Ashesi launched the Educative Collaboration, in which A.D.U. is
+              part of, in 2017.
+            </p>
+          </article>
+
+          <div class="view__more">
+            <a
+              href="https://www.ashesi.edu.gh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Visit Ashesi</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="home__partners__logos">
+        <vueper-slides
+          class="no-shadow"
+          :visible-slides="3"
+          :slide-ratio="1 / 4"
+          :dragging-distance="50"
+          :bullets="false"
+          :autoplay="true"
+          :gap="2"
+          :alwaysRefreshClones="true"
+        >
+          <vueper-slide
+            v-for="partner in partners"
+            :key="partner"
+            :content="partner"
+          />
         </vueper-slides>
       </div>
     </section>
@@ -295,6 +312,60 @@ export default {
           },
         },
       },
+      programs: [
+        {
+          title: "Law",
+          text: `The degree in Business Law teaches courses in many different
+                aspects of legal work, with a strong commitment to justice and
+                equality and fighting corruption.`,
+          url: "/storage/pages/home/programs/law.jpg",
+        },
+        {
+          title: "Accounting",
+          text: `The degree in Accounting and Finance will train you to work as a financial examiner, or a financial analyst, or as a business consultant who helps guide small entrepreneurs.`,
+          url: "/storage/pages/home/programs/accounting.jpg",
+        },
+        {
+          title: "Project Management",
+          text: `The degree in Project Management trains young leaders to manage and ensure that complex projects go according to schedule.`,
+          url: "/storage/pages/home/programs/project.jpg",
+        },
+        {
+          title: "MIS",
+          text: `The degree in MIS will place you at the center of an exciting field by training you to create and manage new technologies.`,
+          url: "/storage/pages/home/programs/mis.jpg",
+        },
+        {
+          title: "Artificial Intellgence",
+          text: `The AI program equips young people with skills to develop intelligent systems and software that leverage data to solve societal and organizational issues.`,
+          url: "/storage/pages/home/programs/ai.jpg",
+        },
+        {
+          title: "English Program",
+          text: `The A.D.U. English program focuses on building the English language proficiency of students, professionals, and entreprenuers etc.`,
+          url: "/storage/pages/home/programs/english.png",
+        },
+      ],
+      partners: [
+        `<div class="partner__logo">
+            <img src="/storage/pages/home/partners/ashesi.jpg" alt="ashesi logo" srcset="">
+          </div>`,
+        `<div class="partner__logo">
+            <img src="/storage/pages/home/partners/nigerr.jpg" alt="nigerr logo" srcset="">
+          </div>`,
+        `<div class="partner__logo">
+            <img src="/storage/pages/home/partners/mcf.jpg" alt="mcf logo" srcset="">
+          </div>`,
+        `<div class="partner__logo">
+            <img src="/storage/pages/home/partners/ansi.jpg" alt="ansi logo" srcset="">
+          </div>`,
+        `<div class="partner__logo">
+            <img src="/storage/pages/home/partners/codel.png" alt="codel logo" srcset="">
+          </div>`,
+        `<div class="partner__logo">
+            <img src="/storage/pages/home/partners/cipmen.jpg" alt="codel logo" srcset="">
+          </div>`,
+      ],
     };
   },
 };

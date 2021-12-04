@@ -1076,14 +1076,16 @@
   color: #99001c !important;
 }
 
-button.read-more-btn {
+button.read-more-btn,
+a.read-more-btn {
   padding: 1rem 5rem;
   background: #262626;
   color: #fff;
   text-transform: uppercase;
   transition: all 0.3s ease-in;
 }
-button.read-more-btn:hover {
+button.read-more-btn:hover,
+a.read-more-btn:hover {
   background: black;
   text-decoration: underline;
 }
@@ -1091,6 +1093,34 @@ button.read-more-btn:hover {
 .mp- {
   -webkit-animation: fade 0.1s ease-in forwards;
           animation: fade 0.1s ease-in forwards;
+}
+
+.view__more {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.view__more > button, .view__more > a {
+  padding: 1rem 5rem;
+  background: #262626;
+  color: #fff;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in;
+}
+.view__more > button:hover, .view__more > a:hover {
+  background: black;
+  text-decoration: underline;
+}
+
+.partner__logo {
+  width: 15rem;
+  height: 15rem;
+}
+.partner__logo > img {
+  width: 100%;
+  height: 100%;
 }
 
 .top__bar__nav {
@@ -2557,7 +2587,7 @@ a:active {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.2222)), url("/storage/banner/about-sm.jpg");
   }
 }
-.page .banner.admissions {
+.page .banner.study-at-adu {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.2222)), url("/storage/banner/admissions.jpg");
 }
 .page .banner.academics {
@@ -2969,9 +2999,8 @@ a:active {
 }
 .home__our__programs {
   width: 100%;
-  padding: 5rem 10rem;
+  padding: 0 10rem;
   background-color: transparent;
-  background-image: linear-gradient(180deg, #758592 7%, #ffffff 100%);
 }
 .home__our__programs__title {
   padding: 0;
@@ -2988,67 +3017,74 @@ a:active {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  justify-content: space-between;
 }
 .home__our__programs__cards__card {
-  height: 35rem;
-  margin: 0.5rem;
-  width: calc(33.33% - (0.5rem * 2));
-  background-color: transparent;
-  background-image: linear-gradient(180deg, #758592 7%, #ffffff 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 3rem 8rem;
-  color: #ffffff;
-  transition: all 0.3s ease-in;
+  height: 22rem;
+  margin: 2rem;
+  margin-left: 0;
+  width: calc(33.33% - (2rem * 2));
+  position: relative;
 }
 @media only screen and (max-width: 35.999em) {
   .home__our__programs__cards__card {
     width: calc(100% - (0.5rem * 2));
     height: 25rem;
     margin: 0;
+    margin-left: 0;
     width: calc(100% - (0 * 2));
     margin-bottom: 2rem;
   }
 }
-.home__our__programs__cards__card:hover {
-  transform: scale(1.1);
+.home__our__programs__cards__card > .front {
+  width: 100%;
+  height: 100%;
 }
-.home__our__programs__cards__card > .title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  margin-bottom: 3rem;
+.home__our__programs__cards__card > .front > .image {
+  width: 100%;
+  height: 17rem;
+}
+.home__our__programs__cards__card > .front > .image > img {
+  width: 100%;
+  height: 100%;
+}
+.home__our__programs__cards__card > .front > .title {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.6rem;
+  text-transform: capitalize;
   font-weight: bold;
-  text-align: center;
 }
-.home__our__programs__cards__card > p {
-  margin-bottom: 3rem;
-}
-.home__our__programs__cards__card > .contact {
+.home__our__programs__cards__card > .back {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  height: 100%;
+  background-color: #99001c;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
-.home__our__programs__cards__card > .link {
+.home__our__programs__cards__card > .back > a {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  height: 100%;
+  color: #fff;
+  padding: 1rem;
 }
-.home__our__programs__cards__card > .link > a {
-  color: #99001c;
+.home__our__programs__cards__card > .back > a > .title {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: bold;
 }
-.home__our__programs__cards__card > .link > span {
-  padding-left: 0.5rem;
-  font-size: 1.4rem;
-  transition: all 0.3s ease-out;
-  color: #99001c;
-}
-.home__our__programs__cards__card > .link:hover > a {
-  text-decoration: underline;
-}
-.home__our__programs__cards__card > .link:hover > span {
-  transform: translateX(0.5rem);
+.home__our__programs__cards__card:hover > .back {
+  visibility: visible;
+  opacity: 1;
 }
 @media only screen and (max-width: 61.999em) {
   .home__our__programs__cards__card {
@@ -3249,6 +3285,52 @@ a:active {
     width: 100%;
   }
 }
+.home__partners {
+  width: 100%;
+  padding: 5rem 10rem;
+}
+.home__partners__title {
+  padding: 0;
+  padding-bottom: 3rem;
+}
+.home__partners__ashesi {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.home__partners__ashesi__image {
+  width: 30%;
+  height: 40rem;
+}
+.home__partners__ashesi__image > img {
+  width: 100%;
+  height: 100%;
+}
+.home__partners__ashesi__text {
+  width: 70%;
+  padding: 5rem;
+}
+.home__partners__ashesi__text > .title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #262626;
+  margin-bottom: 2rem;
+}
+.home__partners__ashesi__text > .article {
+  margin-bottom: 0.5rem;
+}
+.home__partners__ashesi__text > .article > p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.home__partners__ashesi__text > .view__more {
+  justify-content: flex-start;
+  align-items: center;
+}
+.home__partners__logos {
+  margin-top: 3rem;
+}
 .home__spotlight {
   width: 100%;
   padding: 0 10rem;
@@ -3439,6 +3521,14 @@ a:active {
     width: 100%;
   }
 }
+.about__our__values {
+  padding: 5rem 10rem;
+  width: 100%;
+}
+.about__our__values__title {
+  padding: 0;
+  padding-bottom: 3rem;
+}
 .about__leadership {
   width: 100%;
   padding: 5rem 10rem;
@@ -3468,6 +3558,7 @@ a:active {
 .about__leadership__avatar__card {
   height: 30rem;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(25% - (0.5rem * 2));
   display: flex;
   flex-direction: column;
@@ -3515,6 +3606,14 @@ a:active {
   width: 30%;
   padding-right: 1rem;
   font-size: 1.1rem;
+}
+.about__our__team {
+  padding: 5rem 10rem;
+  width: 100%;
+}
+.about__our__team__title {
+  padding: 0;
+  padding-bottom: 3rem;
 }
 
 .admissions__advantage {
@@ -3629,6 +3728,7 @@ a:active {
 .admissions__advantage__info__cards__card {
   height: 40rem;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(33.33% - (0.5rem * 2));
   background-color: transparent;
   background-image: linear-gradient(180deg, #758592 7%, #ffffff 100%);
@@ -3696,9 +3796,7 @@ a:active {
 }
 .admissions__info {
   width: 100%;
-  padding: 10rem 10rem;
-  background-color: transparent;
-  background-image: linear-gradient(180deg, #758592 7%, #ffffff 100%);
+  padding: 5rem 10rem;
 }
 .admissions__info__title {
   padding: 0;
@@ -3709,85 +3807,127 @@ a:active {
     padding: 10rem 2rem;
   }
 }
+.admissions__info__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.admissions__info__cta {
+  width: 27.5%;
+  height: 25rem;
+  margin: 1rem 2rem 0 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #324147;
+  padding: 1rem;
+  color: #fff;
+}
+.admissions__info__cta > .title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 .admissions__info__cards {
+  width: 72.5%;
+  height: 25rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  justify-content: space-between;
 }
 .admissions__info__cards__card {
-  height: 35rem;
-  margin: 0.5rem;
-  width: calc(33.33% - (0.5rem * 2));
-  background-color: transparent;
-  background-image: linear-gradient(180deg, #758592 7%, #ffffff 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 3rem;
-  color: #ffffff;
-  transition: all 0.3s ease-in;
-}
-@media only screen and (max-width: 61.999em) {
-  .admissions__info__cards__card {
-    height: 40rem;
-    margin: 0.5rem;
-    width: calc(33.33% - (0.5rem * 2));
-    margin-bottom: 2rem;
-  }
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 25rem;
+  margin: 1rem;
+  margin-left: 0;
+  width: calc(25% - (1rem * 2));
 }
 @media only screen and (max-width: 35.999em) {
   .admissions__info__cards__card {
     width: calc(100% - (0.5rem * 2));
-    height: 30rem;
+    height: 25rem;
     margin: 0;
+    margin-left: 0;
     width: calc(100% - (0 * 2));
     margin-bottom: 2rem;
   }
 }
-.admissions__info__cards__card:hover {
-  transform: scale(1.1);
+.admissions__info__cards__card > .front {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.admissions__info__cards__card > .title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  margin-bottom: 3rem;
+.admissions__info__cards__card > .front > .image {
+  width: 100%;
+  height: 25rem;
+}
+.admissions__info__cards__card > .front > .image > img {
+  width: 100%;
+  height: 100%;
+}
+.admissions__info__cards__card > .front > .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.888), rgba(0, 0, 0, 0.777), rgba(0, 0, 0, 0.555), rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.111));
+}
+.admissions__info__cards__card > .front > .overlay > .title {
+  width: 100%;
+  height: 7rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 1.6rem;
+  text-transform: capitalize;
   font-weight: bold;
-  text-align: center;
+  padding: 1.5rem 1rem;
+  line-height: 1;
+  color: #fff;
 }
-.admissions__info__cards__card > p {
-  margin-bottom: 3rem;
-}
-.admissions__info__cards__card > .contact {
+.admissions__info__cards__card > .back {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  height: 100%;
+  background-color: #324147;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
-.admissions__info__cards__card > .link {
+.admissions__info__cards__card > .back > a {
+  display: block;
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  height: 100%;
+  color: #fff;
+  padding: 1rem;
 }
-.admissions__info__cards__card > .link > a {
-  color: #99001c;
+.admissions__info__cards__card > .back > a > .title {
+  margin-bottom: 1rem;
+  font-size: 1.2;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 1;
 }
-.admissions__info__cards__card > .link > span {
-  padding-left: 0.5rem;
-  font-size: 1.4rem;
-  transition: all 0.3s ease-out;
-  color: #99001c;
+.admissions__info__cards__card > .back > a > .text {
+  font-size: 1rem;
 }
-.admissions__info__cards__card > .link:hover > a {
-  text-decoration: underline;
-}
-.admissions__info__cards__card > .link:hover > span {
-  transform: translateX(0.5rem);
+.admissions__info__cards__card:hover > .back {
+  visibility: visible;
+  opacity: 1;
 }
 @media only screen and (max-width: 61.999em) {
   .admissions__info__cards__card {
     padding: 3rem 3rem;
+    border-radius: 10px;
   }
 }
 
@@ -3799,47 +3939,56 @@ a:active {
   padding: 5rem 10rem;
 }
 .academics__majors__title {
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
 }
-.academics__majors__cards {
+.academics__majors__program {
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  align-items: flex-start;
 }
-.academics__majors__cards:first-child {
-  border-bottom: 1px solid rgba(175, 175, 175, 0.664);
+.academics__majors__program__image {
+  width: 32%;
+  height: 35rem;
 }
-.academics__majors__cards__card {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 2rem;
-  transition: all 0.3s ease-in;
-  padding: 1rem 0;
+.academics__majors__program__image > img {
+  width: 100%;
+  height: 100%;
 }
-.academics__majors__cards__card .icon {
-  margin-right: 1rem;
+.academics__majors__program__text {
+  width: 68%;
+  padding: 3rem 0 3rem 3rem;
 }
-.academics__majors__cards__card .icon > i {
-  font-size: 4rem;
-  color: #99001c;
-}
-.academics__majors__cards__card__title {
-  font-size: 1.4rem;
+.academics__majors__program__text > .title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: bold;
   color: #262626;
+  margin-bottom: 2rem;
+}
+.academics__majors__program__text > .article {
   margin-bottom: 0.5rem;
 }
-.academics__majors__cards__card .content {
-  flex: 1;
+.academics__majors__program__text > .article > p:not(:last-child) {
+  margin-bottom: 2rem;
 }
-.academics__majors__cards__card:first-child {
-  border-right: 1px solid rgba(175, 175, 175, 0.664);
+.academics__majors__program__text > .article > .values__list {
+  list-style-type: square;
+  margin-left: 1rem;
 }
-.academics__majors__cards__card:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+.academics__majors__program__text > .article > .values__list > li > h3 {
+  color: #262626;
+  font-weight: bold;
 }
-.academics__majors__cards__card:hover__title {
-  color: #858282;
+.academics__majors__program__text > .view__more {
+  justify-content: flex-start;
+  align-items: center;
+}
+.academics__majors__program.image--right {
+  flex-direction: row-reverse;
+}
+.academics__majors__program.image--right > .image--right--text {
+  padding: 3rem 3rem 3rem 0;
 }
 .academics__ai {
   width: 100%;
@@ -3854,7 +4003,7 @@ a:active {
   color: #fff;
 }
 .academics__ai__title {
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
   color: #fff;
 }
 .academics__ep {
@@ -3870,7 +4019,55 @@ a:active {
   color: #fff;
 }
 .academics__ep__title {
-  padding: 3rem 0;
+  padding: 0 0 3rem 0;
+}
+.academics__learn__more {
+  width: 100%;
+  padding: 0 10rem;
+  padding-top: 8rem;
+}
+.academics__learn__more__wrapper {
+  padding: 4rem 6rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.academics__learn__more__wrapper > .title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #262626;
+}
+.academics__learn__more__wrapper > .text {
+  margin: 1rem 0 2rem 0;
+}
+.academics__learn__more__wrapper > .links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.academics__learn__more__wrapper > .links > .links__wrapper {
+  width: calc(100% / 3);
+}
+.academics__learn__more__wrapper > .links > .links__wrapper > li {
+  position: relative;
+  margin-right: 2rem;
+}
+.academics__learn__more__wrapper > .links > .links__wrapper > li::before, .academics__learn__more__wrapper > .links > .links__wrapper > li::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  background-color: #99001c;
+}
+.academics__learn__more__wrapper > .links > .links__wrapper > li > a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #99001c;
+  transition: all 0.3s ease-in;
+}
+.academics__learn__more__wrapper > .links > .links__wrapper > li:hover > a {
+  text-decoration: underline;
+  transform: scale(1.05) translateX(1rem);
 }
 
 .english-programme-details {
@@ -3939,11 +4136,15 @@ a:active {
   width: 100%;
 }
 .student__life__welcome {
-  width: 70%;
+  width: 100%;
   padding: 5rem 10rem;
 }
 .student__life__welcome__title {
   padding: 3rem 0;
+}
+.student__life__welcome > p {
+  width: 70%;
+  margin-bottom: 2rem;
 }
 .student__life__album {
   width: 100%;
@@ -3968,6 +4169,7 @@ a:active {
 .student__life__album .album__card {
   height: 30.2rem;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(33.333% - (0.5rem * 2));
   background-color: #fff;
   border-radius: 3px;
@@ -3977,6 +4179,7 @@ a:active {
   .student__life__album .album__card {
     height: 30.2rem;
     margin: 0.5rem;
+    margin-left: 0;
     width: calc(100% - (0.5rem * 2));
   }
 }
@@ -4019,6 +4222,7 @@ a:active {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   height: 100%;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(33.3333% - (0.5rem * 2));
   display: flex;
   flex-direction: column;
@@ -4050,6 +4254,7 @@ a:active {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   height: 32rem;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(33.333% - (0.5rem * 2));
   display: flex;
   flex-direction: column;
@@ -4064,6 +4269,7 @@ a:active {
   .student__life .clubs-and-societies > .clubs-and-societies__card {
     height: 32rem;
     margin: 0.5rem;
+    margin-left: 0;
     width: calc(50% - (0.5rem * 2));
   }
 }
@@ -4071,6 +4277,7 @@ a:active {
   .student__life .clubs-and-societies > .clubs-and-societies__card {
     height: 37rem;
     margin: 0rem;
+    margin-left: 0;
     width: calc(100% - (0rem * 2));
     margin-bottom: 2rem;
   }
@@ -4090,6 +4297,7 @@ a:active {
 .student__life__album__card {
   height: 100%;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(100% - (0.5rem * 2));
   background-color: #fff;
   border-radius: 3px;
@@ -4126,11 +4334,27 @@ a:active {
 }
 
 .iilab__welcome {
-  width: 70%;
+  width: 100%;
   padding: 5rem 10rem;
 }
 .iilab__welcome__title {
   padding: 3rem 0;
+}
+.iilab__welcome__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.iilab__welcome__content > .image {
+  width: 35%;
+  height: 25rem;
+}
+.iilab__welcome__content > .image > img {
+  width: 100%;
+  height: 100%;
+}
+.iilab__welcome__content__wrapper {
+  width: 50%;
 }
 .iilab__services {
   padding: 0rem 10rem;
@@ -4151,6 +4375,7 @@ a:active {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   height: 13rem;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(25% - (0.5rem * 2));
   display: flex;
   flex-direction: column;
@@ -4188,9 +4413,65 @@ a:active {
 }
 .iilab__event {
   padding: 0rem 10rem;
+  padding-bottom: 10rem;
 }
 .iilab__event__title {
   padding: 3rem 0;
+}
+.iilab__event__events {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.iilab__event__events > a {
+  display: block;
+  width: calc(100% / 3);
+  height: 10rem;
+  transition: all 0.3s ease-in;
+}
+.iilab__event__events > a:not(:last-child) {
+  margin-right: 1rem;
+}
+.iilab__event__events > a:hover {
+  color: #99001c;
+}
+.iilab__event__events > a:hover .date {
+  background-color: #6b0c1db0;
+}
+.iilab__event__events__card {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.iilab__event__events__card > .date {
+  width: 10rem;
+  height: inherit;
+  background-color: #99001c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iilab__event__events__card > .date > .month {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+.iilab__event__events__card > .date > .day {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+.iilab__event__events__card .article {
+  margin-left: 1rem;
+  width: calc(100% - 11rem);
+  height: inherit;
+  font-size: 1.6rem;
+  line-height: 1.1;
 }
 .iilab__event__link {
   display: flex;
@@ -4233,40 +4514,13 @@ a:active {
 .iilab__event__link__more:hover > span {
   transform: translateX(0.5rem);
 }
-.iilab__event__events > .image {
-  width: 100%;
-  height: 12rem;
-}
-@media only screen and (max-width: 35.999em) {
-  .iilab__event__events > .image {
-    height: 20rem;
-  }
-}
-.iilab__event__events > .image > img {
-  width: 100%;
-  height: 100%;
-}
-.iilab__event__events > .date {
-  color: #99001c;
-  font-size: 1.2rem;
-  padding-top: 0.5rem;
-  text-transform: uppercase;
-}
-.iilab__event__events > .link {
-  color: #2196f3;
-  font-size: 1.2rem;
-  font-style: italic;
-}
-.iilab__event__events > .link:hover {
-  text-decoration: underline;
-}
-.iilab__event__events > .description {
-  font-size: 1.2rem;
-}
 .iilab__news {
   width: 100%;
-  padding: 0 10rem;
-  margin: 4rem 0;
+  padding: 3rem 10rem 9rem 10rem;
+  background: #324147;
+}
+.iilab__news__title {
+  padding: 3rem 0;
 }
 @media only screen and (max-width: 61.999em) {
   .iilab__news {
@@ -4279,6 +4533,8 @@ a:active {
 }
 .iilab__news .news__container {
   width: 100%;
+  background-color: #fff;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .iilab__news .news__container > .image {
   width: 100%;
@@ -4293,7 +4549,8 @@ a:active {
 }
 .iilab__news .news__container > .title {
   font-size: 1.2rem;
-  padding: 1rem 0;
+  padding: 2rem 1rem;
+  transition: all 0.3s ease-in;
 }
 .iilab__news .news__container > .text {
   padding-bottom: 1rem;
@@ -4332,32 +4589,17 @@ a:active {
 .iilab__news .news__container:hover > .image > img {
   transform: scale(1.2);
 }
-.iilab__news .view__more {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5rem;
-}
-.iilab__news .view__more > button {
-  padding: 1rem 5rem;
-  background: #262626;
-  color: #fff;
-  text-transform: uppercase;
-  transition: all 0.3s ease-in;
-}
-.iilab__news .view__more > button:hover {
-  background: black;
+.iilab__news .news__container:hover > .title {
   text-decoration: underline;
+  color: #99001c;
 }
 
 .event-details {
   width: 100%;
-  padding: 0 2rem;
 }
 .event-details > .image {
   width: 100%;
-  height: 20rem;
+  height: 30rem;
 }
 .event-details > .image > img {
   width: 100%;
@@ -4383,6 +4625,7 @@ a:active {
 .showrooms__card {
   height: 34rem;
   margin: 0.5rem;
+  margin-left: 0;
   width: calc(33.333% - (0.5rem * 2));
   padding: 2rem 0.5rem;
 }
@@ -4390,6 +4633,7 @@ a:active {
   .showrooms__card {
     height: 45rem;
     margin: 0.5rem;
+    margin-left: 0;
     width: calc(33.333% - (0.5rem * 2));
   }
 }
@@ -4397,6 +4641,7 @@ a:active {
   .showrooms__card {
     height: 34rem;
     margin: 0rem;
+    margin-left: 0;
     width: calc(100% - (0rem * 2));
   }
 }
@@ -4480,6 +4725,7 @@ a:active {
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
   height: 100%;
   margin: 2rem;
+  margin-left: 0;
   width: calc(100% - (2rem * 2));
   padding: 1rem;
   border: 1px solid #686767;
@@ -4489,6 +4735,7 @@ a:active {
   .donate__info > .donate__info__card {
     height: 100%;
     margin: 1rem;
+    margin-left: 0;
     width: calc(100% - (1rem * 2));
   }
 }

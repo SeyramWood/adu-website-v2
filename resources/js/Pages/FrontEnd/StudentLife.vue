@@ -24,7 +24,7 @@
         data-aos-duration="1000"
         data-aos-anchor-placement="bottom-bottom"
       >
-        Life on Campuse
+        Life on Campus
       </h1>
       <p
         data-aos="fade-up"
@@ -37,6 +37,16 @@
         environment where students will grow and have a very good experience
         during their academic journey at A.D.U.
       </p>
+      <div class="about__welcome__video">
+        <vueper-slides
+          :dragging-distance="50"
+          :arrows="false"
+          :bullets="false"
+          :fixed-height="true"
+        >
+          <vueper-slide :video="video.video" />
+        </vueper-slides>
+      </div>
     </section>
     <section class="student__life__album">
       <h1
@@ -45,7 +55,7 @@
         data-aos-duration="1000"
         data-aos-anchor-placement="bottom-bottom"
       >
-        Student Gallary
+        Student Gallery
       </h1>
       <div class="album">
         <div class="album__card" v-for="g in gallery" :key="g.name">
@@ -93,6 +103,18 @@ export default {
   },
   data() {
     return {
+      video: {
+        title: "Chancellor’s Message",
+        video: {
+          // url: "https://www.youtube.com/embed/wG7efaUPGTA",
+          url: "https://www.youtube.com/embed/wG7efaUPGTA?controls=1&fs=1&modestbranding=1&color=white&iv_load_policy=3&autohide=1&enablejsapi=1",
+          // props: { autoplay: true, loop: true, controls: false, muted: true },
+          props: {
+            allow:
+              "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+          },
+        },
+      },
       gallery: [
         {
           album: "The student government",

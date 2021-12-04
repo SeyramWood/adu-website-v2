@@ -16,54 +16,56 @@
         &__video {
             width: 100%;
             height: 45rem;
-            
         }
         @include respond-down(md) {
             padding: 0 $container-padding-xs;
-            
         }
         @include respond-only(xs) {
-            
             &__content {
-            width: 100%;
-            
-            
-        }
-        &__video {
-            
-            height: 30rem;
-            
-        }
+                width: 100%;
+            }
+            &__video {
+                height: 30rem;
+            }
         }
     }
-    &__our__why{
+
+    &__our__why {
         padding: 5rem $container-padding;
         width: 100%;
         background-position: top;
         background-size: cover;
         background-repeat: no-repeat;
         background-image: url("/storage/bgs/bg.jpg");
-        & > p, & article{
+        & > p,
+        & article {
             width: 70%;
         }
         &__title {
             padding: 3rem 0;
-            
         }
         @include respond-down(md) {
             padding: 10rem $container-padding-xs;
             &__title {
-            padding: 3rem 0;
-            
-        }
+                padding: 3rem 0;
+            }
         }
         @include respond-only(xs) {
-            & > p, & article{
-            width: 100%;
-        }
+            & > p,
+            & article {
+                width: 100%;
+            }
         }
     }
 
+    &__our__values {
+        padding: 5rem $container-padding;
+        width: 100%;
+        &__title {
+            padding: 0;
+            padding-bottom: 3rem;
+        }
+    }
     &__leadership {
         width: 100%;
         padding: 5rem $container-padding;
@@ -75,8 +77,6 @@
         &__title {
             padding: 3rem 0;
             text-transform: capitalize;
-            
-            
         }
         &__container {
             width: 100%;
@@ -136,6 +136,15 @@
             width: 30%;
             padding-right: 1rem;
             font-size: 1.1rem;
+        }
+    }
+
+    &__our__team {
+        padding: 5rem $container-padding;
+        width: 100%;
+        &__title {
+            padding: 0;
+            padding-bottom: 3rem;
         }
     }
 }

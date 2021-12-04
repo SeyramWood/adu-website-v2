@@ -22,14 +22,6 @@
         <h1 class="about__welcome__title title--primary" data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-anchor-placement="bottom-bottom">Welcome by the Chacellor</h1>
-        <p data-aos="fade-up"
-          data-aos-duration="1500"
-          data-aos-anchor-placement="bottom-bottom">
-          The mission of A.D.U. is to prepare the most talented young people in
-          Francophone Africa to design and develop the development of their
-          nations as ethical and effective leaders in the public, private and
-          not-for-profit sectors.
-        </p>
       </main>
       <div class="about__welcome__video">
         <vueper-slides
@@ -80,6 +72,55 @@
           </article>
     </section>
 
+
+    <section class="about__our__values">
+      <h1 class="about__our__values__title title--primary" data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="bottom-bottom">Our Values</h1>
+      <div class="academics__majors__program">
+        <div class="academics__majors__program__image">
+          <img src="/storage/pages/about/values.jpg" alt="" srcset="" />
+        </div>
+        <div class="academics__majors__program__text">
+          <h3 class="title"></h3>
+          <article class="article">
+            <ul
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1500"
+              class="values__list"
+            >
+             <li>
+               <h3>Leadership</h3>
+               <ul>
+                 <li>
+                   We believe that every problem is solvable when we commit the necessary time, creativity, energy, and grit. Every day, we search for better, more efficient ways to serve our community and we take personal responsibility for this.
+                 </li>
+               </ul>
+             </li>
+             <li>
+               <h3>Excellence</h3>
+               <ul>
+                 <li>
+                   We recognize that excellence is both technical and ethical and we take pride in our work. We strive to become a world-class institution. We never compromise on our values, and we never take short courts.
+                 </li>
+               </ul>
+             </li>
+             <li>
+               <h3>Innovation</h3>
+               <ul>
+                 <li>
+                   We consistently strive to find new ways to do better, to think out of the box, to use available local resources, and create models and solutions that have not been imagined or implemented yet.
+                 </li>
+               </ul>
+             </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    
     <section class="about__leadership" id="leadership">
       <h1 class="about__leadership__title title--primary" data-aos="fade-up"
           data-aos-duration="1000"
@@ -103,6 +144,32 @@
       
       </main>
     </section>
+
+    <section class="about__our__team">
+       <h1 class="about__our__team__title title--primary" data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="bottom-bottom">Join Our Team</h1>
+      <div class="academics__majors__program image--right">
+        <div class="academics__majors__program__image image--right--image">
+          <img src="/storage/pages/about/our-team.jpg" alt="" srcset="" />
+        </div>
+        <div class="academics__majors__program__text image--right--text">
+          <h3 class="title"></h3>
+          <article class="article">
+            <p
+              data-aos="fade-up"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1500"
+            >
+              A.D.U. is a rapidly growing organization, and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. Have a look below to get some ideas as to ways to engage with A.D.U. If you are interested in one of these opportunities—or something else—please send us your CV and a cover note explaining your interest:
+              <a href="mailto:talent@ilimi.edu.ne" class="color-primary">talent@ilimi.edu.ne</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
   </section>
 </template>
 
@@ -138,11 +205,18 @@ export default {
 
       leadership: [
         {
+          name: "Michaëlle Jean",
+          faculty: "",
+          position: "Chancellor, A.D.U",
+          image: "/storage/pages/about/chancellor.jpg",
+        },
+        {
           name: "Kader Kaneye",
           faculty: "",
           position: "Founder and President, A.D.U",
           image: "/storage/pages/about/KaderKaneye.jpg",
         },
+
         {
           name: "ALMOKTAR ALLAHOURY",
           faculty: "",
