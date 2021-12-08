@@ -41,6 +41,14 @@
           </p>
         </div>
         <div class="image">
+          <h1
+            class="title--primary title-mobile"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-anchor-placement="bottom-bottom"
+          >
+            Welcome to IILAB
+          </h1>
           <img
             src="/storage/pages/iilab/iilab.jpg"
             alt="IILAB Logo"
@@ -131,8 +139,10 @@
         >
           <div class="iilab__event__events__card">
             <div class="date">
-              <span class="month">DEC</span>
-              <span class="day">03</span>
+              <span class="month">{{
+                e.date.split(",")[0].substring(0, 3)
+              }}</span>
+              <span class="day">{{ e.date.split(",")[0].split(" ")[1] }}</span>
             </div>
             <div
               class="article"
@@ -197,7 +207,7 @@
       </div> -->
     </section>
 
-    <s-modal v-model="eventModal" width="50rem">
+    <s-modal v-model="eventModal" :width="`${getScreen ? '35rem' : '50rem'}`">
       <div class="event-details" v-if="currentEvent">
         <div class="image">
           <vueper-slides slide autoplay :touchable="false" fixed-height="30rem">
@@ -216,7 +226,10 @@
         </p>
       </div>
     </s-modal>
-    <s-modal v-model="showroomModal" width="50rem">
+    <s-modal
+      v-model="showroomModal"
+      :width="`${getScreen ? '35rem' : '50rem'}`"
+    >
       <div class="event-details" v-if="currentShowroom">
         <div class="image">
           <vueper-slides slide autoplay :touchable="false" fixed-height="30rem">

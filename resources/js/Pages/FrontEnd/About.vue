@@ -8,7 +8,7 @@
           data-aos-duration="1200"
           data-aos-anchor-placement="bottom-bottom"
         >
-          About A.D.U.
+          {{ $t('pages.about.banner') }}
         </h1>
         <ul class="breadcrumb">
           <li><Link href="/">Home</Link></li>
@@ -21,7 +21,7 @@
       <main class="about__welcome__content">
         <h1 class="about__welcome__title title--primary" data-aos="fade-up"
           data-aos-duration="1000"
-          data-aos-anchor-placement="bottom-bottom">Welcome by the Chacellor</h1>
+          data-aos-anchor-placement="bottom-bottom">{{ $t('pages.about.welcome') }}</h1>
       </main>
       <div class="about__welcome__video">
         <vueper-slides
@@ -91,26 +91,26 @@
               class="values__list"
             >
              <li>
-               <h3>Leadership</h3>
+               <h3>{{ $t('pages.about.values.h1') }}</h3>
                <ul>
                  <li>
-                   <p>We believe that every problem is solvable when we commit the necessary time, creativity, energy, and grit. Every day, we search for better, more efficient ways to serve our community and we take personal responsibility for this.</p>
+                   <p>{{ $t('pages.about.values.p1') }}</p>
                  </li>
                </ul>
              </li>
              <li>
-               <h3>Excellence</h3>
+               <h3>{{ $t('pages.about.values.h2') }}</h3>
                <ul>
                  <li>
-                   <p>We recognize that excellence is both technical and ethical and we take pride in our work. We strive to become a world-class institution. We never compromise on our values, and we never take short courts.</p>
+                   <p>{{ $t('pages.about.values.p2') }}</p>
                  </li>
                </ul>
              </li>
              <li>
-               <h3>Innovation</h3>
+               <h3>{{ $t('pages.about.values.h3') }}</h3>
                <ul>
                  <li>
-                  <p> We consistently strive to find new ways to do better, to think out of the box, to use available local resources, and create models and solutions that have not been imagined or implemented yet.</p>
+                  <p>{{ $t('pages.about.values.p3') }}</p>
                  </li>
                </ul>
              </li>
@@ -161,7 +161,7 @@
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1500"
             >
-              A.D.U. is a rapidly growing organization, and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. Have a look below to get some ideas as to ways to engage with A.D.U. If you are interested in one of these opportunities—or something else—please send us your CV and a cover note explaining your interest:
+              {{ $t('pages.about.ourteam') }}
               <a href="mailto:talent@ilimi.edu.ne" class="color-primary">talent@ilimi.edu.ne</a>
             </p>
           </article>

@@ -221,11 +221,26 @@
           </div>
         </div>
       </div>
+      <div class="home__news__letter">
+        <form @suformbmit.prevent="signin()" class="form">
+          <h1>Subscribe to our newsletter</h1>
+          <div class="form__group__icon">
+            <span class="prepend"><v-icon>mdi-mail</v-icon></span>
+            <input
+              type="email"
+              id="yourmail@gmail.com"
+              placeholder="yourmail@gmail.com"
+              aria-label="yourmail@gmail.com"
+            />
+          </div>
+          <button type="submit" class="login__form__btn block">Submit</button>
+        </form>
+      </div>
     </section>
 
-    <s-modal v-model="newsModal" width="50rem">
+    <s-modal v-model="newsModal" :width="`${getScreen ? '35rem' : '50rem'}`">
       <div class="event-details" v-if="currentNews">
-        <!-- <div class="image">
+        <div class="image">
           <vueper-slides slide autoplay :touchable="false" fixed-height="30rem">
             <vueper-slide
               v-for="(image, i) in currentNews.images"
@@ -234,7 +249,7 @@
               style="height: 100%"
             />
           </vueper-slides>
-        </div> -->
+        </div>
         <h1>{{ currentNews.title }}</h1>
 
         <div v-html="currentNews.text"></div>
@@ -258,6 +273,7 @@ export default {
     VueperSlide,
     SModal,
   },
+  computed: {},
   mounted() {
     this.$watch(
       () => this.$lang.locale,
@@ -273,6 +289,7 @@ export default {
     return {
       newsModal: false,
       currentNews: null,
+
       news: [],
       video: {
         title: "Welcome to the Future",

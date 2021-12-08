@@ -36,6 +36,35 @@ Vue.use(VueLang, {
 Object.defineProperty(Vue.prototype, "$axios", { value: axios });
 Object.defineProperty(Vue.prototype, "route", { value: window.route });
 
+
+Vue.mixin({
+    computed: {
+        getScreen() {
+      return this.mobileView;
+    },
+    },
+    created() {
+        const mediaQuery = window.matchMedia("(max-width: 35.999em)");
+        this.$nextTick(() => {
+            mediaQuery.addEventListener("change", this.handleMobileChange);
+        });
+        
+    },
+    data() {
+        return {
+            mobileView: false,
+        }
+    },
+    methods: {
+        handleMobileChange(e) {
+      if (e.matches) {
+        this.mobileView = true;
+      } else {
+        this.mobileView = false;
+      }
+    },
+    }
+})
 createInertiaApp({
     resolve: name => import(`./Pages/${name}`),
     setup({ el, App, props }) {

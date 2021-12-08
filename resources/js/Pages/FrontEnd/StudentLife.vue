@@ -59,7 +59,7 @@
       </h1>
       <div class="album">
         <div class="album__card" v-for="g in gallery" :key="g.name">
-          <lightbox css="h-400 " :cells="5" :items="g.images"></lightbox>
+          <lightbox css="h-400 " :cells="3" :items="g.images"></lightbox>
           <div class="details">
             <div class="details__content">
               <span>Album</span>
@@ -131,10 +131,10 @@ export default {
           album: "Community Service",
           date: "Nov. 9, 2021",
           images: [
+            "/storage/pages/gallery/community_service/4.jpeg",
             "/storage/pages/gallery/community_service/1.jpeg",
             "/storage/pages/gallery/community_service/2.jpeg",
             "/storage/pages/gallery/community_service/3.jpeg",
-            "/storage/pages/gallery/community_service/4.jpeg",
             "/storage/pages/gallery/community_service/5.jpeg",
             "/storage/pages/gallery/community_service/6.jpeg",
             "/storage/pages/gallery/community_service/7.jpeg",

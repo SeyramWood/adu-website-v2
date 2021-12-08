@@ -187,3 +187,23 @@ a.read-more-btn {
         height: 13rem;
     }
 }
+.hs {
+    margin: 1.5rem 0;
+}
+
+.enquire__form {
+    padding: 0 2rem;
+
+    & > .button {
+        text-align: right;
+        & > button {
+            @include readMoreBtn;
+            background: $primary;
+            letter-spacing: 1.1px;
+            &:hover {
+                background: $primary-dark;
+                text-decoration: underline;
+            }
+        }
+    }
+}

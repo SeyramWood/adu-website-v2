@@ -97,7 +97,7 @@ return [
         'text' => "<p>A.D.U. was nominated, along with 3 other universities, as one of the best schools in the 8 regions of Niger.
 The announcement was made at a grand gala held at the Mahatma Gandhi Conference Center on November 7, 2021
 </p><p>The Alkalami d'Or are trophies that reward public and private schools as well as universities and institutes in the eight regions of Niger for their willingness to make academic and extracurricular excellence their battle horse. At A.D.U. academic excellence reigns as evidenced by the 100% success rate in the Brevet de Techniciens Supérieur d'Etat in June 2021.</p>",
-        'image' => [
+        'images' => [
           '/storage/pages/home/news/news-a-1.jpg',
           '/storage/pages/home/news/news-a-2.jpg',
           '/storage/pages/home/news/news-a-3.jpg',
@@ -110,7 +110,7 @@ The announcement was made at a grand gala held at the Mahatma Gandhi Conference 
         <p>On Friday, November 8 we received one of the funniest but also most inspiring visits. It was Oualas, one of the greatest African comedians, holder of the Best Comedian Award at the 1st edition of the Awards du Rire 2018.</p>
         <p>Oualas, whose real name is Tahar Lazrak, came to visit us after his show at the Hotel Noom in Niamey, where A.D.U. was a partner. The joy and happiness of meeting the world star could be seen on the faces of the YoungLeaders who did not hesitate to take as many pictures as possible with Oualas, a.k.a the most Moroccan Ivorian of them all!</p>
         ",
-        'image' => [
+        'images' => [
           '/storage/pages/home/news/news-b-1.jpg',
           '/storage/pages/home/news/news-b-2.png',
           '/storage/pages/home/news/news-b-3.png',
@@ -125,7 +125,7 @@ The announcement was made at a grand gala held at the Mahatma Gandhi Conference 
         <p>During this training, they were given different notions to reinforce what they are already learning with iiLab. Right after the training, a visit to the CIPMEN premises took place with entrepreneurs coming from all over Niamey to exhibit products derived from Moringa. This was followed by a pitch competition where the candidate, Khadija Ibrahim, a 3rd year student at A.D.U. won first place!</p>
         <p>The evening ended with a networking session around a buffet offered by the CIPMEN. A great way to celebrate the Global Entrepreneurship Week which starts on November 8th and ends on November 13th.</p>
         ",
-        'image' => [
+        'images' => [
           '/storage/pages/home/news/news-c-1.jpg',
           '/storage/pages/home/news/news-c-2.jpg',
           '/storage/pages/home/news/news-c-3.jpg',
@@ -139,33 +139,155 @@ The announcement was made at a grand gala held at the Mahatma Gandhi Conference 
     'va' => 'View all',
   ],
 
+  'studyatadu' => [
+    'banner' => 'Study at A.D.U.',
+    'title' => 'The A.D.U. Advantage',
+    'p' => 'African Development University (A.D.U) is a university of excellence based in Niamey (Niger). A.D.U draws inspiration from the world’s leading institutions of higher education such as Ashesi University in Ghana and Harvard University in the US. A.D.U is a bilingual establishment, with instruction in both French and English.',
+    'advantages' => [
+      'p11' => '100%',
+      'p12' => 'Student',
+      'p13' => 'Centered',
+      'p21' => '100%',
+      'p22' => 'Entrepreneurial',
+      'p23' => 'Focused',
+      'p31' => '70%',
+      'p32' => 'Bilingual Education',
+      'p33' => 'English & French',
+    ],
+
+    'admission' => [
+      'title' => "Become a Young Leader",
+      'cta' => [
+        'title' => "Admissions",
+        'text' => "Our 3-year bachelor programs are both nationally and internationally recognized. Our degree programs are all accredited by Ministry of Higher Education, Research and Innovation, Niger.  Apply to Study with us!",
+      ],
+      "admissions" => [
+        [
+          "title" => "Requirements",
+          "text" => "You must have a Baccalaureate certificate; High School Final Exam Grades, Birth Certificate, Certificate of Citizenship, Language test scores and Letters of Recommendation.",
+          'url' => "/storage/pages/academics/requirement.jpg",
+        ],
+        [
+          "title" => "Apply Online",
+          "text" => "To apply, visit our online application portal to create an account, fill out the application form, upload all required documents, pay the registration fee, and submit your application.",
+          'url' => "/storage/pages/academics/apply-online.jpg",
+        ],
+        [
+          "title" => "Scholarship",
+          "text" => "A.D.U. offers Scholarship for talented student who are experiencing economic and social hardship so that they will be able to achieve their goals and impact their community.",
+          'url' =>  "/storage/pages/academics/scholarship.jpg",
+        ],
+        [
+          "title" => "Contact Admissions",
+          "text" => "For additional questions and/or inquiry regarding the status of your application, you can reach us through:\nadmissions@ilimi.edu.ne,\n+227 923 968 68 (WhatsApp)\n+227 9339 68 68 (Mobile)",
+          'url' => "/storage/pages/academics/contact.jpg",
+        ],
+      ],
+    ],
+
+    'majors' => [
+      'title' => "Business Administration (Featured Majors)",
+      'law' => [
+        'title' => "Bachelor of Business Law",
+        'p1' => "A.D.U. offers a three-year degree in Business Law that teaches courses in many different aspects of legal work. Students entering this program should have a strong commitment to justice and equality and fighting corruption.",
+        'p2' => "The types of careers that graduates can expect are Jurist of Enterprises, Magistrate in Public Jurisdictions, Legal Consultant, Notary Public. Our courses are taught by a diverse body of professionals who bring a rich international background to the ADU campus.",
+      ],
+      'accounting' => [
+        'title' => "Bachelor of Accounting",
+        'p1' => "A degree in Accounting and Finance will train you to work as a financial examiner, or a financial analyst, or a finance manager or as a business consultant who helps guide small entrepreneurs. It is a very exacting work…it requires a high level of attention to detail.",
+        'p2' => "A degree in accounting can give you the skills you need to work as a business and financial consultant, helping entrepreneurs and small business owners find financial success. With a career as a financial examiner, you’ll help ensure compliance with laws governing banks and how they lend money.",
+      ],
+      'pm' => [
+        'title' => "Bachelor of Project Management",
+        'p1' => "Project Managers are trained to make certain that complex projects go according to schedule. Project management positions are essential in construction and civil engineering etc. Large Humanitarian Assistance Organizations such as UNHCR, WFP and international NGOs often employ many project managers to help maintain efficiency within the day-to-day tasks of the organization.",
+        'p2' => "In keeping with the Ilimi concept, each course is designed and taught with a thread of ethical conduct woven through it to reinforce the responsibility of graduates to press ethical practice in their work-places. Courses also stress a commitment to combat social injustice and to make the world a better place for the less fortunate",
+      ],
+      'mis' => [
+        'title' => "Bachelor of Management Information Systems",
+        'p1' => "Information Technology processes rely on creativity & problem-solving. Studying IT will provide you with an opportunity to use your skills to come up with innovative solutions to problems faced by the world.",
+        'p2' => "Technology positions available in IT often include jobs such as creating software, analyzing new forms of data, and developing solutions for today's highly technological world. A.D.U.’s program will place you into the center of that exciting field by training you to create new technologies.",
+      ]
+    ],
+
+    'ai' => [
+      'title' => " Artificial Intelligence",
+      'background' => [
+        'title' => "Background",
+        'p' => "The UN recognizes the role of technology, science and capacity building as major pillars of the means of implementing and achieving the SDGs. Globally, the Industry 4.0 revolution requires young people to acquire and maintain digital skills for innovation & entrepreneurship. Furthermore, the Niger 2.0 strategic plan seeks to employ digital technologies to promote the development of Niger, by focusing on four strategic areas: e-government, digital skills promotion, a smart villages program and creating an innovation and technology city. Thus, the Bachelor of Science in Artificial Intelligence (BS-AI) program is designed to bridge the Science-Technology-Innovation (STI) workforce gap and to drive the digital transformation agenda of Niger and the Sahel region.",
+      ],
+      'description' => [
+        'title' => "Program Description",
+        'p' => "The Bachelor of Science in Artificial Intelligence - BS(AI) program provides learners the knowledge and skills to transform complex inputs of text, vision, language and large databases into intelligible and actionable decisions to enhance human capabilities. The curriculum provides hands-on experience in various aspects of Artificial Intelligence including foundations of data science, artificial intelligence languages, machine learning, artificial neural networks, and developing data products backed with strong foundations of software engineering for web and mobile, agile principles, ethics and social theory. The program will equip students with skills in computational thinking, problem modelling, software engineering and project management to develop data-driven intelligent systems and software to address societal and organisational issues in agriculture, commerce, education, health, industry and governance etc.",
+      ],
+      'outcomes' => [
+        'title' => "Outcomes",
+        'p' => [
+          '1' => "Leverage the principles computing with emphasis on Artificial Intelligence to address issues in areas like health, education, commerce and agriculture etc.",
+          '2' => "Transform complex inputs, such as vision, language, and other databases, into intelligent and actionable decisions",
+          '3' => "Solve applications and systems software challenges with a comprehensive set of software engineering skills in desktop, web and mobile",
+          '4' => "Apply leadership and ethical principles in solving societal and organizational problems using AI",
+        ]
+      ],
+    ],
+
+    'ep' => [
+      'title' => "English Program",
+      'background' => [
+        'title' => 'Background',
+        'p' => "The ADU English program is an English Learning establishment of the African Development University that is focused on building the English language proficiency of professionals, businessmen and businesswomen etc., especially in the francophone region and is committed to taking learners through an exciting language learning journey with courses tailored to give learners an all-round study of the language. A mastery of English language helps you to easily navigate through the business environment, to communicate effectively in English Language, collaborate effectively with English speaking colleagues, business partners and prospective business partners from English speaking countries and to increase your chances of getting jobs and expanding your net worth and network as a bilingual speaker."
+      ],
+      'cs' => [
+        'title' => 'Course Syllabus',
+        'p' => "Our syllabus is comprised of topics in English grammar, vocabulary and the four major language skills: listening, reading, writing, speaking. Our courses are delivered using the following methods: Teacher-led mode of instruction; Student-led mode of teaching: using debates, oral and written presentations etc. and Instructional video and audio materials.\Students will take a placement test at the beginning of the program to determine their current proficiency level and at the end of the program, there will also be another placement test to review their growth rate. The current levels we have are Beginner (A1), Pre-intermediate (A2), Intermediate (B1) and High-intermediate (B2)"
+      ],
+      "packages" => [
+        'title' => "Our Packages",
+        'p' => [
+          'a' => "<strong>On-Campus Package:</strong> We are located at Village de la Francophonie where our physical classes are held. Classes on campus take place every Tuesday and Thursday, 6:30pm.",
+          'b' => "<strong>Company Package:</strong> We also have a learning package for companies and organizations who want members of their staff to learn English. Our teachers are available to come to your companies and teach based on the schedule that works for you. The only requirement for this package is for a class to have a minimum of 10 students/learners.",
+        ]
+      ]
+
+    ]
+
+  ],
+
 
   'about' => [
-    'banner' => 'A.D.U. is a rapidly growing non-profit organization and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you.',
-    'link' => [
-      '1' => 'Welcome by Chancellor',
-      '2' => 'Our Why',
-      '3' => 'Leadership',
-    ],
+    'banner' => 'About A.D.U.',
+    'welcome' => "Welcome by the Chacellor",
     'title' => [
       '1' => 'about',
       '2' => 'Welcome',
       '3' => 'Our Why',
       '4' => 'Board of Trustees',
     ],
-    'welcome' => 'The mission of A.D.U. is to prepare the most talented young people in Francophone Africa to design and develop the development of their nations as ethical and effective leaders in the public, private and not-for-profit sectors.',
     'why' => [
       'p1' => 'The mission of A.D.U. is to prepare the most talented young people in Niger and in Francophone Africa to design and drive the development of their nations as ethical and effective leaders in the public, private and not-for-profit sectors.',
       'p2' => [
         'content' => 'We offer training in liberal arts that aims to develop students\' critical thinking, problem-solving skills, and ability to serve their communities. A.D.U. is a bilingual institution (French and English) and is the first not-for-profit university in Niger to offer world-class education to students from the Sahel region. A.D.U. draws inspiration from the world\'s leading institutions of higher education such as Ashesi University in Ghana and Harvard University in the US. Founded in October 2017, A.D.U. has served a total of 250+ students of which 60% of our student population are female. From our initial student cohort (Obama Cohort), up to 90% of the entire student population, (now Alumni) are engaged in entrepreneurial ventures, working in fulltime jobs, as well as exploring graduate school opportunities.',
       ],
       'p3' => 'A.D.U. was established to address two of the most pressing problems facing the Sahel region i.e., the dearth of quality tertiary education institutions and the increasing cohort of young adults unprepared for participation and leadership in the 21st Century workforce. From inception to date, A.D.U. has played a leading role in changing the narrative that quality education is impossible to get most especially from the Sahel region of Africa. From an enrolment rate of 35 when we launched in 2017 to an enrolment rate of 524 in 2019, we have witnessed wide acceptance for our programs. We have also prioritized opening access to opportunities for young people, whereby 70% of our students receive some form of financial aid. This has enabled bright students from underserved communities to study at our institution, which was something that wouldn’t have been erstwhile possible. 
-Our unique model – ILIMI; which means “education, intellectual and knowledge” in Hausa, focuses on developing ethical and impact driven young leaders.
-',
+              Our unique model – ILIMI; which means “education, intellectual and knowledge” in Hausa, focuses on developing ethical and impact driven young leaders.',
       'btnMore' => 'view more',
       'btnLess' => 'view less',
-    ]
+    ],
+
+    'values' => [
+      'h1' => "Leadership",
+      'p1' => "We believe that every problem is solvable when we commit the necessary time, creativity, energy, and grit. Every day, we search for better, more efficient ways to serve our community and we take personal responsibility for this.",
+      'h2' => "Excellence",
+      'p2' => "We recognize that excellence is both technical and ethical and we take pride in our work. We strive to become a world-class institution. We never compromise on our values, and we never take short courts.",
+      'h3' => "Innovation",
+      'p3' => "We consistently strive to find new ways to do better, to think out of the box, to use available local resources, and create models and solutions that have not been imagined or implemented yet.",
+    ],
+
+    'ourteam' => "A.D.U. is a rapidly growing organization, and we bring together the most talented individuals from Niger and around the globe. If you share our values, believe that higher education can transform the Sahel region, and want to be part of that transformation and adventure, we want to talk with you. Have a look below to get some ideas as to ways to engage with A.D.U. If you are interested in one of these opportunities—or something else—please send us your CV and a cover note explaining your interest: ",
+
+
   ],
+
+
   'admission' => [
     'banner' => 'African Development University (A.D.U) is a university of excellence
           based in Niamey (Niger). Our mission is to prepare the most talented
@@ -384,6 +506,7 @@ Our unique model – ILIMI; which means “education, intellectual and knowledge
           <span>(+227)92 39 6868 /93 39 6868</span> or you can also visit our
           campus.'
   ],
+
   'iilab' => [
     'link' => [
       '1' => 'About iiLab',
@@ -426,9 +549,35 @@ This office focuses on employer relations at the national and international leve
     ],
     'events' => [
       [
+        'title' => "iiLab Open House for the Kagamé cohort",
+        'description' => "As lifelong members of the ilimi community, the iiLab’s support to the Kagamé cohort (which just graduated) will always be available. Nonetheless, for the upcoming months, the iiLab has an exciting and comprehensive entrepreneurship support program in store, just for the Kagamé Cohort, made up of large-group sessions, one-on-one sessions, some funding, and other activities aiming to equip our Kagame Cohort Young Leaders with tools and resources for them to catalyze their growth as entrepreneurs and that of their ideas, regardless of their current advancement level. The Open House allowed the iiLab to give out more details about the program which will be informed by insights from a currently ongoing needs-assessment process.
+                    Note: The iiLab also has exciting plans for the Wangari, Johnson and Jean cohorts, once they return to campus.",
+        'date' => "September 14, 2021",
+        'images' => [
+          "/storage/pages/iilab/shoe/1.jpeg",
+          "/storage/pages/iilab/shoe/2.jpeg",
+          "/storage/pages/iilab/shoe/3.jpeg",
+          "/storage/pages/iilab/shoe/4.jpeg",
+          "/storage/pages/iilab/shoe/5.jpeg",
+          "/storage/pages/iilab/shoe/6.jpeg",
+        ],
+      ],
+      [
+        'title' => "Feature by Ashesi University via the Education Collaborative Newsletter",
+        'description' => "In their latest newsletter issue, Ashesi University, our mentor and partner, featured the iiLab, our ILIMI INNOVATION LAB, where our #ADUYoungLeaders express their entrepreneurial creativity.\nThe article narrates how our super star Feyçal managed to create his business thanks to the iiLab support over the years, despite all the constraints faced by young entrepreneurs in Niger.\nThe focus was on the fact that A.D.U. intends to become a model for universities in the Sahel wanting to implement transformative start-up incubators. Indeed, given the enormous potential of entrepreneurship in the future we want for Niger and the Sahel in general, the development of the entrepreneurial skills of our Young Leaders as well as that of their initiatives has always had a central place in A.D.U.’s learning model.",
+        'date' => "November 20, 2021",
+        'images' => [
+          "/storage/pages/iilab/bike/1.jpeg",
+          "/storage/pages/iilab/bike/2.jpeg",
+          "/storage/pages/iilab/bike/3.jpeg",
+          "/storage/pages/iilab/bike/4.jpeg",
+          "/storage/pages/iilab/bike/5.jpeg",
+        ],
+      ],
+      [
         'title' => "In collaboration with E-TAKARA",
         'description' => "In collaboration with E-Takara, the iiLab of A.D.U held an info session yesterday on the A.D.U campus. We were privileged to have previous laureates of the competition such as Latifa Salissou Hassane (via audio recording), Rafiou Ala Roi Fhad (in person) and Idriss Laouali Abdou (via video-recording) share with ADU Young Leaders about the incredible experience their participation in the competition has been for them. The E-Takara team also shared more about the vision behind the competition, as well as the selection criteria, before encouraging A.D.U Young Leaders to apply massively.",
-        'date' => "December 25, 2021",
+        'date' => "December 05, 2021",
         'images' => [
           "/storage/pages/iilab/cosm/1.jpg",
           "/storage/pages/iilab/cosm/2.jpg",
@@ -439,19 +588,6 @@ This office focuses on employer relations at the national and international leve
           "/storage/pages/iilab/cosm/7.jpg",
           "/storage/pages/iilab/cosm/8.jpg",
           "/storage/pages/iilab/cosm/9.jpg",
-        ],
-      ],
-      [
-        'title' => "iiLab Open House for the Kagamé cohort",
-        'description' => "As lifelong members of the ilimi community, the iiLab’s support to the Kagamé cohort (which just graduated) will always be available. Nonetheless, for the upcoming months, the iiLab has an exciting and comprehensive entrepreneurship support program in store, just for the Kagamé Cohort, made up of large-group sessions, one-on-one sessions, some funding, and other activities aiming to equip our Kagame Cohort Young Leaders with tools and resources for them to catalyze their growth as entrepreneurs and that of their ideas, regardless of their current advancement level. The Open House allowed the iiLab to give out more details about the program which will be informed by insights from a currently ongoing needs-assessment process.
-                    Note: The iiLab also has exciting plans for the Wangari, Johnson and Jean cohorts, once they return to campus.",
-        'date' => "September 14, 2021",
-        'images' => [
-          "/storage/pages/iilab/bike/1.jpeg",
-          "/storage/pages/iilab/bike/2.jpeg",
-          "/storage/pages/iilab/bike/3.jpeg",
-          "/storage/pages/iilab/bike/4.jpeg",
-          "/storage/pages/iilab/bike/5.jpeg",
         ],
       ],
     ],
@@ -460,32 +596,18 @@ This office focuses on employer relations at the national and international leve
         'title' => 'Aichatou Mahamane (Kagame Cohort): CEO of Tallit Design',
         'description' => 'Tallit Design is a new company aiming to promote African and mainly Nigerien culture through the making of accessories for men and women and clothing combining modernity and culture. Tallit Design is also in the field of interior design and events, highlighting African cultures, using our various traditional loincloths. To date, Tallit has had to participate in several events and organized its very first fashion show for the launch of its collection named Mahba. Thanks to the success of such a fashion show, Tallit Design had the privilege to dress the hostesses during the opening ceremony of King Abdullah bin Abdulaziz Al Saoud University, organized by the Waqf authority, among other opportunities. Do not hesitate to contact them at 89257766 or via their email address tallitdesign227@gmail.com and follow them on',
         'images' => [
-          "/storage/pages/iilab/cosm/1.jpg",
-          "/storage/pages/iilab/cosm/2.jpg",
-          "/storage/pages/iilab/cosm/3.jpg",
-          "/storage/pages/iilab/cosm/4.jpg",
-          "/storage/pages/iilab/cosm/5.jpg",
-          "/storage/pages/iilab/cosm/6.jpg",
-          "/storage/pages/iilab/cosm/7.jpg",
-          "/storage/pages/iilab/cosm/8.jpg",
-          "/storage/pages/iilab/cosm/9.jpg",
+          "/storage/pages/iilab/shoe/1.jpeg",
+          "/storage/pages/iilab/shoe/2.jpeg",
+          "/storage/pages/iilab/shoe/3.jpeg",
+          "/storage/pages/iilab/shoe/4.jpeg",
+          "/storage/pages/iilab/shoe/5.jpeg",
+          "/storage/pages/iilab/shoe/6.jpeg",
         ],
       ],
       [
         'title' => 'Mahaman Sani A. Souleymane (Obama Cohort): CEO of Kakaki Multimedia',
         'description' => 'Kakaki is an agency specializing in global business communication. We do all kinds of design, printing on any medium, embroidery, personalized advertising gadgets, business flyers, community management etc. Kakaki is also involved in major communication projects such as branding of buildings, vehicles, illuminated signs, totems, 3D illuminated initials, painting, etc. The very first companies to trust our services are (among others) EBTP Grand Projet (for which we crafted golden initials, and community management), SOPAMIN (for their new website), Le SULTAN (for their totem and community management), Polyclinic Magori (we branding their cars, sewing their blouses, digital embroidery, goodies, etc.), ADU (for kakemonos, photo frames, and others), Nikki Hotel (for their luminous initials), ETS Zaao (for their luminous initials and t-shirts), and Guimbia make-up (for their luminous initials). For all your communication needs, do not hesitate to contact them at 91912329/89417277, or via their email address contactkakaki@gmail.com / souleymanemsani@gmail.com. You can follow them on',
         'images' => [
-          "/storage/pages/iilab/bike/1.jpeg",
-          "/storage/pages/iilab/bike/2.jpeg",
-          "/storage/pages/iilab/bike/3.jpeg",
-          "/storage/pages/iilab/bike/4.jpeg",
-          "/storage/pages/iilab/bike/5.jpeg",
-        ],
-      ],
-      [
-        'title' => 'Abdoul-Rachid Maman Kadade (Kagame Cohort): CEO of Sahel Solar Academy',
-        'description' => "Sahel Solar Academy is a non-profit technical and vocational training institution on the various installation and maintenance techniques of solar power plants as well as underground water pumps powered by PV. It is a center where people will come to learn how to install and maintain PV powered power plants, solar panels and underground water pumps in households, businesses, communities, villages and any particular place it either commercial, industrial, institutional or residential.",
-        'images' => [
           "/storage/pages/iilab/cosm/1.jpg",
           "/storage/pages/iilab/cosm/2.jpg",
           "/storage/pages/iilab/cosm/3.jpg",
@@ -495,6 +617,18 @@ This office focuses on employer relations at the national and international leve
           "/storage/pages/iilab/cosm/7.jpg",
           "/storage/pages/iilab/cosm/8.jpg",
           "/storage/pages/iilab/cosm/9.jpg",
+        ],
+      ],
+      [
+        'title' => 'Abdoul-Rachid Maman Kadade (Kagame Cohort): CEO of Sahel Solar Academy',
+        'description' => "Sahel Solar Academy is a non-profit technical and vocational training institution on the various installation and maintenance techniques of solar power plants as well as underground water pumps powered by PV. It is a center where people will come to learn how to install and maintain PV powered power plants, solar panels and underground water pumps in households, businesses, communities, villages and any particular place it either commercial, industrial, institutional or residential.",
+
+        'images' => [
+          "/storage/pages/iilab/bike/1.jpeg",
+          "/storage/pages/iilab/bike/2.jpeg",
+          "/storage/pages/iilab/bike/3.jpeg",
+          "/storage/pages/iilab/bike/4.jpeg",
+          "/storage/pages/iilab/bike/5.jpeg",
         ],
 
       ],

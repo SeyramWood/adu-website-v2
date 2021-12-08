@@ -88,6 +88,27 @@
                 &:not(:last-child) {
                     margin-right: 2.5rem;
                 }
+                &:last-child {
+                    display: none;
+                }
+                @include respond-down(md) {
+                    &:last-child {
+                        display: inline-block;
+                    }
+                    &:nth-child(n + 1):not(&:nth-child(n + 5)) {
+                        display: none;
+                    }
+                }
+                & > a {
+                    color: $white;
+                    font-weight: bold;
+                    font-size: 1.4rem;
+                    text-transform: capitalize;
+                    letter-spacing: 1.2px;
+                }
+                &.active > a {
+                    color: $primary;
+                }
                 &.lang {
                     & > ul {
                         display: flex;
@@ -191,14 +212,20 @@
             }
             & > .navigation__links {
                 & > .navigation__links__link {
+                    & > a {
+                        color: $secondary;
+                    }
+                    &.active > a {
+                        color: $primary;
+                    }
                     &.lang {
                         & > ul {
                             & > li {
                                 &:first-child::after {
-                                    color: $text;
+                                    color: $secondary;
                                 }
                                 & > a {
-                                    color: $text;
+                                    color: $secondary;
                                 }
                                 &:hover > a {
                                     color: $primary;
@@ -211,10 +238,10 @@
                     }
                     & > .menu__icon {
                         & > span.menu {
-                            background-color: $text;
+                            background-color: $secondary;
                             &::before,
                             &::after {
-                                background-color: $text;
+                                background-color: $secondary;
                             }
                         }
                     }
@@ -270,7 +297,7 @@
 
             &__brand {
                 width: 12rem;
-                margin: 2rem auto;
+                margin: 2rem;
                 @include respond-down(md) {
                     width: 15rem;
                 }
@@ -291,7 +318,7 @@
                             text-transform: capitalize;
                             font-size: 1.3rem;
                             letter-spacing: 1.2px;
-                            color: black;
+                            color: $secondary;
                             display: inline-block;
                             transition: all 0.3s ease-in;
                             @include respond-down(md) {
@@ -458,6 +485,17 @@
                     rgba(0, 0, 0, 0.2222)
                 ),
                 url("/storage/banner/admissions.jpg");
+
+            @include respond-only(xs) {
+                background-position: left;
+                background-image: linear-gradient(
+                        to right,
+                        rgba(0, 0, 0, 0.555),
+                        rgba(0, 0, 0, 0.333),
+                        rgba(0, 0, 0, 0.2222)
+                    ),
+                    url("/storage/banner/admissions.jpg");
+            }
         }
         &.academics {
             background-position: 50%;
@@ -582,10 +620,10 @@
                         margin-top: 3rem;
                         & > span {
                             &:first-child {
-                                font-size: 3rem;
+                                font-size: 3.5rem;
                             }
                             &:last-child {
-                                font-size: 5rem;
+                                font-size: 6rem;
                             }
                         }
                     }

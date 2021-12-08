@@ -7,21 +7,38 @@
             padding: 3rem 0;
         }
         & > p {
-            width: 70%;
+            width: 100%;
             margin-bottom: 2rem;
         }
+        @include respond-down(md) {
+            padding: 5rem $container-padding-xs;
+        }
+        @include respond-only(xs) {
+            &__title {
+                // padding: 3rem $container-padding-xs;
+            }
+            & > p {
+                width: 100%;
+
+                margin-bottom: 2rem;
+            }
+        }
     }
+
     &__album {
         width: 100%;
         padding: 0 $container-padding;
         &__title {
             padding: 3rem 0;
         }
+        @include respond-down(md) {
+            padding: 3rem $container-padding-xs;
+        }
 
         & .album {
             width: 100%;
             @include respond-down(md) {
-                padding: 5rem 2rem;
+                padding: 0;
             }
 
             @include grid-row;
@@ -38,6 +55,7 @@
                         $height: 30.2rem,
                         $gutter: $column-gutter-1
                     );
+                    margin-bottom: 2rem;
                 }
 
                 & > .details {

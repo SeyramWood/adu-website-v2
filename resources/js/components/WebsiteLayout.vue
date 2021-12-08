@@ -3,10 +3,17 @@
     <aside class="page__side__nav">
       <ul>
         <li>
-          <Link>{{ $t("pages.navigation.5") }}</Link>
+          <a
+            href="http://applications.eduappgh.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ $t("pages.navigation.5") }}</a
+          >
         </li>
         <li>
-          <Link>{{ $t("pages.navigation.6") }}</Link>
+          <a href="javascript:" @click="enquireModal = true">{{
+            $t("pages.navigation.6")
+          }}</a>
         </li>
         <li>
           <Link>{{ $t("pages.navigation.7") }}</Link>
@@ -30,6 +37,38 @@
         </Link>
       </div>
       <ul class="navigation__links">
+        <li
+          :class="[
+            'navigation__links__link',
+            route().current('about') && 'active',
+          ]"
+        >
+          <Link href="/about">{{ $t("pages.navigation.1") }}</Link>
+        </li>
+        <li
+          :class="[
+            'navigation__links__link',
+            route().current('studyAtADU') && 'active',
+          ]"
+        >
+          <Link href="/study-at-adu">{{ $t("pages.navigation.2") }}</Link>
+        </li>
+        <li
+          :class="[
+            'navigation__links__link',
+            route().current('iilab') && 'active',
+          ]"
+        >
+          <Link href="/iilab">{{ $t("pages.navigation.3") }}</Link>
+        </li>
+        <li
+          :class="[
+            'navigation__links__link',
+            route().current('studentLife') && 'active',
+          ]"
+        >
+          <Link href="/student-life">{{ $t("pages.navigation.4") }}</Link>
+        </li>
         <li class="navigation__links__link lang">
           <ul>
             <li :class="[getLocale === 'en' && 'active']">
@@ -58,10 +97,17 @@
         <div class="page__mobile__nav">
           <ul>
             <li>
-              <Link>{{ $t("pages.navigation.5") }}</Link>
+              <a
+                href="http://applications.eduappgh.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >{{ $t("pages.navigation.5") }}</a
+              >
             </li>
             <li>
-              <Link>{{ $t("pages.navigation.6") }}</Link>
+              <a href="javascript:" @click="enquireModal = true">{{
+                $t("pages.navigation.6")
+              }}</a>
             </li>
             <li>
               <Link>{{ $t("pages.navigation.7") }}</Link>
@@ -261,14 +307,6 @@
                 </ul>
               </div>
             </li>
-            <!-- <li>
-              <a
-                href=" https://myilimilms.net/moodle"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ $t("pages.navigation.8") }}</a
-              >
-            </li> -->
           </ul>
         </div>
       </div>
@@ -277,16 +315,79 @@
     <div :class="['page__loader', pageLoader && 'active']">
       <img src="/storage/loader.svg" alt="" srcset="" />
     </div>
+
+    <s-modal
+      title="Make your enquiries"
+      v-model="enquireModal"
+      :width="`${getScreen ? '35rem' : '50rem'}`"
+    >
+      <form class="enquire__form">
+        <div class="form__group">
+          <input
+            type="text"
+            id="fullname"
+            placeholder="Your fullname"
+            aria-label="fullname"
+            autoComplete="true"
+          />
+          <label class="input__label">Your full name</label>
+        </div>
+        <div class="s__row">
+          <div class="s__col c--6">
+            <div class="form__group">
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email"
+                aria-label="email"
+                autoComplete="true"
+              />
+              <label class="input__label">Your email</label>
+            </div>
+          </div>
+          <div class="s__col c--6">
+            <div class="form__group">
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Your phone"
+                aria-label="phone"
+                autoComplete="true"
+              />
+              <label class="input__label">Your phone</label>
+            </div>
+          </div>
+        </div>
+        <div class="form__group">
+          <textarea
+            id="Message"
+            placeholder="Your Message"
+            aria-label="Message"
+            autoComplete="true"
+          ></textarea>
+          <label class="input__label">Your Message</label>
+          <!-- <label class="error-messages" v-if="numberErrors.message">{{
+            numberErrors.message
+          }}</label> -->
+          <!-- <label class="input__label" v-else>Message</label> -->
+        </div>
+        <div class="button">
+          <button type="submit" class="">Submit</button>
+        </div>
+      </form>
+    </s-modal>
   </section>
 </template>
 
 <script>
 import { Link } from "@inertiajs/inertia-vue";
 import { Inertia } from "@inertiajs/inertia";
+import SModal from "../components/SModal";
 export default {
   name: "WebsiteLayout",
   components: {
     Link,
+    SModal,
   },
   computed: {
     getScrollPositon() {
@@ -346,6 +447,7 @@ export default {
       pageLoader: false,
       bannerPageClass: "",
       locale: "",
+      enquireModal: false,
     };
   },
 

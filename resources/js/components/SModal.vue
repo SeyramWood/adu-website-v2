@@ -8,7 +8,8 @@
         aria-describedby="modalDescription"
         :style="`${width && `width:${width};`}`"
       >
-        <header class="modal-header">
+        <header :class="['modal-header', title && 'title']">
+          <h5 class="title">{{ title }}</h5>
           <button type="button" class="btn-close" @click="close">
             <span>&times;</span>
           </button>
@@ -24,7 +25,7 @@
 <script>
 export default {
   name: "SModal",
-  props: ["value", "width"],
+  props: ["value", "width", "title"],
   created() {
     this.$watch(
       () => this.value,

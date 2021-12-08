@@ -18,15 +18,18 @@ $white: #fff;
 $line: #88868644;
 $info: #2196f3;
 
+$nav-drawer: #e8f1fafb;
+
 // Dashboard
 $main-content: 80%;
 $mini-side-nav-width: 4rem;
 $side-nav-width: 20%; //calc(20% - #{$mini-side-nav-width});
 $max-width: 100%;
-$row-gutter: 2rem;
-$column-gutter: 2rem;
+$row-gutter: 1rem;
+$column-gutter: 1rem;
 $column-gutter-1: 0.5rem;
-$top-bar-z-index: 999999;
+$top-bar-z-index: 1;
+$drawer-backdrop: 2;
 
 // Website
 $nav-height: 6rem;

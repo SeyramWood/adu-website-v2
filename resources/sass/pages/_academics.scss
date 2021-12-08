@@ -4,15 +4,23 @@
     &__majors {
         width: 100%;
         padding: 5rem $container-padding;
-        // background-color: red;
         &__title {
             padding: 0 0 3rem 0;
+        }
+        @include respond-down(md) {
+            padding: 5rem $container-padding-xs;
+        }
+        @include respond-only(xs) {
+            padding: 0 $container-padding-xs;
         }
         &__program {
             width: 100%;
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
+            @include respond-only(xs) {
+                flex-direction: column;
+            }
             &__image {
                 width: 32%;
                 height: 35rem;
@@ -20,12 +28,16 @@
                     width: 100%;
                     height: 100%;
                 }
+                @include respond-only(xs) {
+                    width: 100%;
+                    height: 53rem;
+                }
             }
             &__text {
                 width: 68%;
-                padding: 3rem 0 3rem 3rem;
+                padding: 0rem 0 3rem 3rem;
                 & > .title {
-                    text-transform: capitalize;
+                    // text-transform: capitalize;
                     font-size: 2rem;
                     font-weight: bold;
                     color: $secondary;
@@ -58,10 +70,19 @@
                     justify-content: flex-start;
                     align-items: center;
                 }
+
+                @include respond-only(xs) {
+                    width: 100%;
+                    padding: 3rem 0;
+                    & > .article {
+                        padding-right: 0;
+                    }
+                }
             }
 
             &.image--right {
                 flex-direction: row-reverse;
+
                 & > .image--right--image.img-xx {
                     width: 50%;
                 }
@@ -69,6 +90,18 @@
                 }
                 & > .image--right--text {
                     padding: 3rem 3rem 3rem 0;
+                }
+                @include respond-only(xs) {
+                    flex-direction: column;
+                    & > .image--right--image.img-xx {
+                        width: 100%;
+                    }
+                    & > .image--right--image {
+                        height: 45rem;
+                    }
+                    & > .image--right--text {
+                        padding: 3rem 0rem 3rem 0;
+                    }
                 }
             }
         }
@@ -97,6 +130,13 @@
             padding: 0 0 3rem 0;
             color: $white;
         }
+
+        @include respond-only(xs) {
+            padding: 8rem $container-padding-xs;
+            &__wrapper {
+                width: 100%;
+            }
+        }
     }
     &__ep {
         width: 100%;
@@ -120,16 +160,30 @@
         &__title {
             padding: 0 0 3rem 0;
         }
+
+        @include respond-only(xs) {
+            padding: 8rem $container-padding-xs;
+            &__wrapper {
+                width: 100%;
+            }
+        }
     }
 
     &__learn__more {
         width: 100%;
         padding: 0 $container-padding;
         padding-top: 8rem;
+        @include respond-only(xs) {
+            padding: 0 $container-padding-xs;
+            padding-top: 8rem;
+        }
         &__wrapper {
             padding: 4rem 6rem;
             box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
                 rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            @include respond-only(xs) {
+                padding: 1rem 2rem;
+            }
             & > .title {
                 font-size: 3rem;
                 font-weight: bold;
@@ -141,12 +195,17 @@
 
             & > .links {
                 width: 100%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: flex-start;
+                // display: flex;
+                // justify-content: flex-start;
+                // align-items: flex-start;
+                // flex-wrap: wrap;
+
                 & > .links__wrapper {
-                    width: calc(100% / 3);
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
                     & > li {
+                        width: calc(33.33% - 2rem);
                         position: relative;
                         margin-right: 2rem;
 
@@ -158,6 +217,27 @@
                             height: 1px;
                             display: block;
                             background-color: $primary;
+                        }
+                        @include respond-only(xs) {
+                            width: calc(50% - 2rem);
+                            margin-bottom: 1rem;
+                            &::before,
+                            &::after {
+                                display: none;
+                            }
+
+                            &:nth-child(n)::after {
+                                display: block;
+                                background-color: $primary;
+                            }
+                            &:nth-child(1)::before {
+                                display: block;
+                                background-color: $primary;
+                            }
+                            &:nth-child(2)::before {
+                                display: block;
+                                background-color: $primary;
+                            }
                         }
 
                         & > a {
